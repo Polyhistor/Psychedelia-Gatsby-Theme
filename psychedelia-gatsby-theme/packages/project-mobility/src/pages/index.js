@@ -70,8 +70,9 @@ const index = () => {
     padding: 0.25rem 1rem;
     border-radius: 0.3rem;
 
-    color: ${props => props.theme.main};
-    border: 2px solid ${props => props.theme.main};
+    color: ${props => props.theme.fg};
+    border: 2px solid ${props => props.theme.fg};
+    background-color: ${props => props.theme.bg};
   `;
 
   Buttons.defaultProps = {
@@ -81,8 +82,44 @@ const index = () => {
   };
 
   const theme = {
-    main: "mediumseagreen"
+    fg: "palevioletred",
+    bg: "white"
   };
+
+  const invertTheme = ({ fg, bg }) => ({
+    fg: bg,
+    bg: fg
+  });
+
+  const Link = styled.a`
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: papayawhip;
+    color: palevioletred;
+  `;
+
+  const Icon = styled.svg`
+    flex: none;
+    transition: fill 0.25s;
+    width: 48px;
+    height: 48px;
+
+    ${Link}:hover & {
+      fill: rebeccapurple;
+    }
+  `;
+
+  const Label = styled.span`
+    display: flex;
+    align-items: center;
+    line-height: 1.2;
+
+    &::before {
+      content: "◀";
+      margin: 0 10px;
+    }
+  `;
 
   return (
     <Wrapper>
@@ -96,12 +133,24 @@ const index = () => {
       {/* <Button>Pouya</Button>
       <Button as={reversedButton}>Pouya</Button> */}
       {/* <Input type="number" placeholder="input"></Input> */}
-
+      {/* 
       <Buttons>Normal</Buttons>
 
       <ThemeProvider theme={theme}>
         <Buttons>Themed</Buttons>
-      </ThemeProvider>
+
+        <ThemeProvider theme={invertTheme}>
+          <Buttons>Themed</Buttons>
+          <Buttons theme={{ bg: "darkorange" }}>Overriden</Buttons>
+        </ThemeProvider>
+      </ThemeProvider> */}
+
+      <Link>
+        <Icon viewBox="0 0 20 20">
+          <path d="M10 15h8c1 0 2-1 2-2V3c0-1-1-2-2-2H2C1 1 0 2 0 3v10c0 1 1 2 2 2h4v4l4-4zM5 7h2v2H5V7zm4 0h2v2H9V7zm4 0h2v2h-2V7z" />
+        </Icon>
+      </Link>
+      <Label>Hovering my parent change my style!</Label>
     </Wrapper>
   );
 };
