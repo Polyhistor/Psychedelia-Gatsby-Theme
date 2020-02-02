@@ -121,6 +121,49 @@ const index = () => {
     }
   `;
 
+  const numSteps = 20.0;
+
+  let boxElement;
+  let prevRatio0 = 0.0;
+  let increasingColor = "rgba(40,40,190,ratio)";
+  let decreasingColor = "rgba(190,40,40, ratio";
+
+  window.addEventListener(
+    "load",
+    event => {
+      boxElement = document.querySelector("#box");
+
+      createObserver();
+    },
+    false
+  );
+
+  let createObserver = () => {
+    let observer;
+
+    let options = {
+      root: null,
+      rootMargin: "0px",
+      threshold: buildThresholdList()
+    };
+
+    observer = new IntersectionObserver(handleIntersect, options);
+    observer.observe(boxElement);
+  };
+
+  const buildTresholdList = () => {
+    let thresholds = [];
+    let numSteps = 20;
+
+    for (let i = 1.0; i < numSteps; i++) {
+      let ratio = i / numSteps;
+      thresholds.push(ratio);
+    }
+
+    thresholds.push(0);
+    return treshholds;
+  };
+
   return (
     <Wrapper>
       {/* <Title primary>Hello</Title>
@@ -151,6 +194,12 @@ const index = () => {
         </Icon>
       </Link>
       <Label>Hovering my parent change my style!</Label>
+
+      <div id="box">
+        <div class="vertical">
+          Welcome to <strong> The BOX!</strong>
+        </div>
+      </div>
     </Wrapper>
   );
 };
