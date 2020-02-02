@@ -48,6 +48,11 @@
     "yup": "^0.28.0"
   },
   "devDependencies": {
-    "gatsby-plugin-playground": "^1.0.6"
+    "babel-jest": "^25.1.0",
+    "babel-preset-gatsby": "^0.2.27",
+    "gatsby-plugin-playground": "^1.0.6",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.1.0",
+    "react-test-renderer": "^16.12.0"
   }
 }
