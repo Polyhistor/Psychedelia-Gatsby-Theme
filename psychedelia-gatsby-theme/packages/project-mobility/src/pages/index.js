@@ -121,6 +121,21 @@ const index = () => {
     }
   `;
 
+  const numSteps = 20.0;
+  let boxElement;
+  let prevRatio = 0.0;
+  let increasingColor = "rgba(40,40, 190, ratio)";
+  let decreasingColor = "rgba(190,40,40, ratio)";
+
+  window.addEventListener(
+    "load",
+    event => {
+      boxElement = document.querySelector("#box");
+      createObserver();
+    },
+    false
+  );
+
   return (
     <Wrapper>
       {/* <Title primary>Hello</Title>
@@ -151,6 +166,12 @@ const index = () => {
         </Icon>
       </Link>
       <Label>Hovering my parent change my style!</Label>
+
+      <div id="box">
+        <div className="vertical">
+          Welcome to <strong> The Box! </strong>
+        </div>
+      </div>
     </Wrapper>
   );
 };
