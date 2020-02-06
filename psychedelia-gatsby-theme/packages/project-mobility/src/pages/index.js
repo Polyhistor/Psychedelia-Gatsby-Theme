@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import useIntersect from "./useIntersect";
+import TestComp from "./testComp";
 import styled, { ThemeProvider } from "styled-components";
 import "../style.css";
 
@@ -24,7 +25,7 @@ const index = () => {
 
   const compToRender = [WidthBox, FadeBox];
 
-  console.log(compToRender);
+  // console.log(compToRender);
 
   const IntersectBox = props => {
     const [state, toggle] = useState(props.initial || 0);
@@ -32,6 +33,8 @@ const index = () => {
     const [ref, entry] = useIntersect({
       threshold: buildThresholdArray()
     });
+
+    // console.log(ref);
 
     const Component = compToRender[state];
 
@@ -47,17 +50,38 @@ const index = () => {
     );
   };
 
+  const buildHexArray = q =>
+    Array.from(Array(q).keys(), i =>
+      Number(i * 1 * 100)
+        .toString(16)
+        .padStart(3, "0")
+    );
+
   const Wrapper = styled.div`
-    height: 100vh;
+    height: 200vh;
     width: 100vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   `;
 
   return (
     <>
-      <Wrapper></Wrapper>
+      <Wrapper>
+        <TestComp />
+        <h1>Start that shit nigga</h1> */}
+        {/* {Array.from(Array(40).keys(), i => (
+          <br key={i}></br>
+        ))} */}
+        {buildHexArray(10).map((n, i) => (
+          <IntersectBox
+            initial={i % 2}
+            key={n}
+            backgroundColor={`#${n}`}
+          ></IntersectBox>
+        ))}
+      </Wrapper>
     </>
   );
 };
