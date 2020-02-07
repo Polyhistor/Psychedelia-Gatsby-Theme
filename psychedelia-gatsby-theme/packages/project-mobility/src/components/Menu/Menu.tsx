@@ -1,7 +1,7 @@
 import React from "react";
 import { StyledMenu } from "./Menu.styled";
 
-const Menu = () => {
+const Menu = ({ open, setOpen }) => {
   return (
     <StyledMenu>
       <a href="/">
