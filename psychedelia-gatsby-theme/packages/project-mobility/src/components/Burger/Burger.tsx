@@ -1,12 +1,7 @@
 import React from "react";
 import { StyledBurger } from "./Burger.styled";
 
-interface BurgerProps {
-  open: Boolean;
-  setOpen: Function;
-}
-
-const Burger = ({ open, setOpen }: BurgerProps) => {
+const Burger = ({ open, setOpen }) => {
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div></div>

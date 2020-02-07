@@ -8,7 +8,8 @@ module.exports = themeOptions => {
       `gatsby-plugin-react-helmet`,
       `gatsby-transformer-sharp`,
       `gatsby-plugin-polyfill-io`,
-      `gatsby-plugin-styled-components`
+      `gatsby-plugin-styled-components`,
+      `gatsby-plugin-typescript`
     ]
   };
 };
