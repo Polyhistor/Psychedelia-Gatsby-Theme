@@ -5,6 +5,7 @@
   "author": "christopherbiscardi <chris@christopherbiscardi.com> (@chrisbiscardi)",
   "license": "MIT",
   "scripts": {
+    "test": "jest --watch",
     "develop": "gatsby develop",
     "build": "gatsby build"
   },

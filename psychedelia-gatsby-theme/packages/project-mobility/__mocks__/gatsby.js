@@ -21,5 +21,7 @@ module.exports = {
           ...rest,
           href: to
         })
-    )
+    ),
+  StatiQuery: jest.fn(),
+  useStaticQuery: jest.fn()
 };
