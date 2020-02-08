@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import { StyledBurger } from "./Burger.styled";
-import { OpenerProps } from "../interfaces";
+import { OpenerProps } from "../../interfaces/navigation";
 
 const Burger = ({ open, setOpen }: OpenerProps): JSX.Element => {
   return (

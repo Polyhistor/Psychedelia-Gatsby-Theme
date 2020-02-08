@@ -6,3 +6,8 @@ export interface OpenerProps {
 export interface Wrapper {
   children: JSX.Element;
 }
+
+export interface StyledMenuProps {
+  theme: string;
+  open: boolean;
+}
