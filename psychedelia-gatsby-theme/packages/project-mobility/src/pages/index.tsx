@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Layout from "../layouts/layout";
 import { Burger, Menu } from "../components";
+import { OpenerProps } from "../interfaces";
 
 const index = () => {
-  const [open, setOpen]: [boolean, Function] = useState(false);
+  const [open, setOpen]: OpenerProps = useState(false);
 
   return (
     <>

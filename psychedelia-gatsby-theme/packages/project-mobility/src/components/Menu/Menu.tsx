@@ -1,7 +1,8 @@
 import React from "react";
 import { StyledMenu } from "./Menu.styled";
+import { OpenerProps } from "../interfaces";
 
-const Menu = ({ open, setOpen }) => {
+const Menu = ({ open, setOpen }: OpenerProps): JSX.Element => {
   return (
     <StyledMenu>
       <a href="/">
