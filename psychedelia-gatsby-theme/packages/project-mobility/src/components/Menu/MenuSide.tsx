@@ -1,10 +1,10 @@
 import React from "react";
-import { StyledMenu } from "./Menu.styled";
+import { StyledMenuSide } from "./MenuSide.styled";
 import { OpenerProps } from "../../interfaces/navigation";
 
-const Menu = ({ open, setOpen }: OpenerProps): JSX.Element => {
+const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
   return (
-    <StyledMenu open={open}>
+    <StyledMenuSide open={open}>
       <a href="/">
         <span role="img" aria-label="about us">
           &#x1f481;&#x1f3fb;&#x200d;&#x2642;&#xfe0f;
@@ -23,8 +23,8 @@ const Menu = ({ open, setOpen }: OpenerProps): JSX.Element => {
         </span>
         Contact
       </a>
-    </StyledMenu>
+    </StyledMenuSide>
   );
 };
 
-export default Menu;
+export default MenuSide;

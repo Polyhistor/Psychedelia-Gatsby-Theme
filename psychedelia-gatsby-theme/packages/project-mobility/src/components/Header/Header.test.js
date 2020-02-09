@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow, findByClass } from "../../helpers/testHelpers";
-import Menu from "./Menu";
+import Header from "./Header";
 
-const wrapper = shallow(<Menu></Menu>);
+const wrapper = shallow(<Header></Header>);
 
-describe("Menu Component", () => {
+describe("Header Component", () => {
   it("renders without any errors", () => {
     expect(wrapper.length).toBe(1);
   });

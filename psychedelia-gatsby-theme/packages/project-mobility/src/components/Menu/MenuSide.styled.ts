@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { StyledMenuProps } from "../../interfaces/navigation";
 
-export const StyledMenu = styled.div<StyledMenuProps>`
+export const StyledMenuSide = styled.div<StyledMenuProps>`
   display: flex;
   flex-direction: column;
   justify-content: center;
