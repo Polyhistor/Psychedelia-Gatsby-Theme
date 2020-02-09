@@ -9,7 +9,14 @@ module.exports = themeOptions => {
       `gatsby-transformer-sharp`,
       `gatsby-plugin-polyfill-io`,
       `gatsby-plugin-styled-components`,
-      `gatsby-plugin-typescript`
+      `gatsby-plugin-typescript`,
+      {
+        resolve: `gatsby-source-contentful`,
+        options: {
+          spaceId: themeOptions.contentful.spaceId,
+          accessToken: themeOptions.contentful.accessToken
+        }
+      }
     ]
   };
 };
