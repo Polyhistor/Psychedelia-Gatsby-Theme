@@ -6,3 +6,5 @@ export const StyledNavigationWrapper = styled.div`
 `;
 
 export const StyledNavigation = styled.nav``;
+
+export const StyledUlList = styled.ul``;

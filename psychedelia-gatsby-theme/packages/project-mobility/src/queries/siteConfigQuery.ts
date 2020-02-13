@@ -6,7 +6,11 @@ const useSiteConfigQuery = () => {
       allContentfulSiteConfig {
         edges {
           node {
-            navigationLabels
+            navigationLabels {
+              internal {
+                content
+              }
+            }
           }
         }
       }

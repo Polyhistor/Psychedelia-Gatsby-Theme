@@ -1,15 +1,29 @@
 import React from "react";
-import { StyledNavigation, StyledNavigationWrapper } from "./Navigation.styled";
+import {
+  StyledNavigation,
+  StyledNavigationWrapper,
+  StyledUlList
+} from "./Navigation.styled";
 import useSiteConfigQuery from "../../queries/siteConfigQuery";
 
 const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
+  const parsedObjects = [];
 
   console.log(websiteConfigData);
 
+  const renderLabels = () =>
+    websiteConfigData[0].node.navigationLabels
+      .map(e => parsedObjects.push(JSON.parse(e.internal.content)))
+      .map((e, i) => <li key={i}>{e.label}</li>);
+
+  console.log(parsedObjects);
+
   return (
     <StyledNavigationWrapper>
-      <StyledNavigation></StyledNavigation>
+      <StyledNavigation>
+        <StyledUlList>{renderLabels()}</StyledUlList>
+      </StyledNavigation>
     </StyledNavigationWrapper>
   );
 };
