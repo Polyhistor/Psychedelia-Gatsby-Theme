@@ -5,6 +5,22 @@ export const StyledNavigationWrapper = styled.div`
   margin: 0 auto;
 `;
 
-export const StyledNavigation = styled.nav``;
+export const StyledNavigation = styled.nav`
+  padding: 0 5%;
+`;
 
-export const StyledUlList = styled.ul``;
+export const StyledUlList = styled.ul`
+  display: flex;
+  margin-right: auto;
+  min-height: 8rem;
+  align-items: center;
+  font-weight: 500;
+
+  & > li {
+    padding: 0 5%;
+    color: white;
+    list-style: none;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+`;

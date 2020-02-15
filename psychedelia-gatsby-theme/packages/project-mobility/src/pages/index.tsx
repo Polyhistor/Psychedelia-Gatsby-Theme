@@ -18,7 +18,7 @@ const index = () => {
       <Layout>
         <div ref={node}>
           <Menu open={open} setOpen={setOpen}></Menu>
-          <Burger open={open} setOpen={setOpen}></Burger>
+          {/* <Burger open={open} setOpen={setOpen}></Burger> */}
         </div>
       </Layout>
     </>

@@ -5,24 +5,20 @@ import {
   StyledUlList
 } from "./Navigation.styled";
 import useSiteConfigQuery from "../../queries/siteConfigQuery";
+import { NavigationLabels } from "../../interfaces/navigation";
+import { NavigationParser } from "../../helpers/navigationParser";
 
 const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
-  const parsedObjects = [];
-
-  console.log(websiteConfigData);
-
-  const renderLabels = () =>
-    websiteConfigData[0].node.navigationLabels
-      .map(e => parsedObjects.push(JSON.parse(e.internal.content)))
-      .map((e, i) => <li key={i}>{e.label}</li>);
-
-  console.log(parsedObjects);
 
   return (
     <StyledNavigationWrapper>
       <StyledNavigation>
-        <StyledUlList>{renderLabels()}</StyledUlList>
+        <StyledUlList>
+          {NavigationParser(websiteConfigData).map((e: NavigationLabels) => (
+            <li>{e.label}</li>
+          ))}
+        </StyledUlList>
       </StyledNavigation>
     </StyledNavigationWrapper>
   );
