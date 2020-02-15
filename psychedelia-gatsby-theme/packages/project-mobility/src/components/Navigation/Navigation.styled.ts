@@ -17,7 +17,7 @@ export const StyledUlList = styled.ul`
   font-weight: 500;
 
   & > li {
-    padding: 0 5%;
+    padding: 0 1.6rem;
     color: white;
     list-style: none;
     font-size: 2rem;
