@@ -4,6 +4,6 @@ import styled from "styled-components";
 export const StyledLogo = styled.img.attrs(props => ({
   src: `${props.url}`
 }))`
-  width: 16rem;
+  width: 22rem;
   height: auto;
 `;

@@ -7,7 +7,7 @@ import {
 import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 import { NavigationLabels } from "../../interfaces/navigation";
 import { NavigationParser } from "../../helpers/navigationParser";
-import Logo from "./Logo";
+import Logo from "../Logo";
 
 const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
