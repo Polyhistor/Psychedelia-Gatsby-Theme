@@ -11,6 +11,11 @@ const useSiteConfigQuery = () => {
                 content
               }
             }
+            logo {
+              file {
+                url
+              }
+            }
           }
         }
       }

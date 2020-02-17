@@ -6,6 +6,7 @@ export const StyledNavigationWrapper = styled.div`
 `;
 
 export const StyledNavigation = styled.nav`
+  display: flex;
   padding: 0 5%;
 `;
 

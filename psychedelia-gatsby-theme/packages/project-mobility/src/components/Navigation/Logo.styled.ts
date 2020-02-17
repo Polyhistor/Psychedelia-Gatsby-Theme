@@ -1,3 +1,9 @@
 import styled from "styled-components";
 
-export const StyledLogo = styled.img``;
+// TODO - TYPE CHECK
+export const StyledLogo = styled.img.attrs(props => ({
+  src: `${props.url}`
+}))`
+  width: 16rem;
+  height: auto;
+`;
