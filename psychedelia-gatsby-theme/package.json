@@ -5,9 +5,10 @@
   "version": "0.0.1",
   "scripts": {
     "develop:mobility": "cd packages/project-mobility && gatsby develop",
-    "clean:mobility": "cd packages/project-mobility && gatsby clean",
+    "clean:mobility": "cd packages/project-mobility && gatsby clean && rm -rf node_modules",
     "build:mobility": "cd packages/project-mobility && gatsby build",
-    "test:mobility": "cd packages/project-mobility && npm test"
+    "test:mobility": "cd packages/project-mobility && npm test",
+    "clean": "rm -rf node_modules"
   },
   "workspaces": [
     "packages/*"

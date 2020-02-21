@@ -2,7 +2,7 @@
   "name": "example",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "christopherbiscardi <chris@christopherbiscardi.com> (@chrisbiscardi)",
+  "author": "Pouya Ataei",
   "license": "MIT",
   "scripts": {
     "test": "jest --watch",
@@ -10,7 +10,7 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "^2.18.8",
+    "gatsby": "^2.19.17",
     "gatsby-theme-minimal": "^1.0.0"
   }
 }

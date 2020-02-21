@@ -12,6 +12,8 @@ import Logo from "../Logo";
 const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
 
+  console.log(NavigationParser(websiteConfigData));
+
   return (
     <StyledNavigationWrapper>
       <StyledNavigation>
