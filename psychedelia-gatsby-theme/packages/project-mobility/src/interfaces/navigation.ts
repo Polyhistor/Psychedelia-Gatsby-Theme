@@ -22,7 +22,7 @@ export interface NavigationInternalContent {
 
 export interface NavigationLabels {
   link: string;
-  label: string;
+  label: NavigationLabels;
   subs?: Array<Object>;
   map?: Function;
 }

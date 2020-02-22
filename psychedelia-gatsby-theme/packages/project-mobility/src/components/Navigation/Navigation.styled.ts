@@ -13,16 +13,21 @@ export const StyledNavigation = styled.nav`
 
 export const StyledUlList = styled.ul`
   display: flex;
+  flex-direction: ${({ direction }) => (direction ? `${direction}` : "row")};
   margin-left: auto;
-  min-height: 8rem;
-  align-items: center;
+  padding-left: 0;
+  align-items: ${({ align }) => `${align}`};
   font-weight: 500;
 
   & > li {
-    padding: 0 1.6rem;
-    color: ${({ theme }) => theme.primaryDark};
+    padding: ${({ liPadding }) => liPadding};
     list-style: none;
     font-size: 2rem;
     text-transform: uppercase;
+
+    & > a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.primaryDark};
+    }
   }
 `;

@@ -9,7 +9,10 @@ const Logo = () => {
 
   return (
     <span>
-      <StyledLogo url={websiteConfigData[0].node.logo.file.url}></StyledLogo>
+      <StyledLogo
+        url={websiteConfigData[0].node.logo.file.url}
+        alt="Mobility Aid Logo"
+      ></StyledLogo>
     </span>
   );
 };
