@@ -9,7 +9,7 @@ module.exports = {
       resolve: `gatsby-theme-minimal`,
       options: {
         contentful: {
-          spaceId: process.env.CONTENTFUL_SPACEID,
+          spaceId: process.env.CONTENTFUL_SPACE_ID,
           accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
         }
       }
