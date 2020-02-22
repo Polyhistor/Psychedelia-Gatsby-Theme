@@ -9,7 +9,7 @@ import {
 } from "./Navigation.styled";
 import { NavigationLabels } from "../../interfaces/navigation";
 import { NavigationParser } from "../../helpers/navigationParser";
-import { StyledDivWrapper } from "../Common/DivWrapper.styled";
+import { ToolTip } from "../Common/ToolTip";
 
 // Assessts
 import Logo from "../Logo";
@@ -25,33 +25,40 @@ const Navigation = () => {
     <StyledNavigationWrapper>
       <StyledNavigation>
         <Logo />
-        <StyledUlList align="center" liPadding="0 1.6rem">
+        <StyledUlList
+          align="center"
+          liPadding="0 1.6rem"
+          fontWeight="500"
+          liAnimation="scale"
+        >
           {NavigationParser(websiteConfigData).map(
             (e: NavigationLabels, idx: number) => (
-              <li
-                onMouseEnter={() => setID(idx)}
-                onMouseLeave={() => setID(4)}
-                key={idx}
-              >
+              <li onMouseEnter={() => setID(idx)} key={idx}>
                 <Link to={e.link}>{e.label}</Link>
                 {e.subs ? (
-                  <StyledDivWrapper
+                  <ToolTip
                     display={idx === ID ? "block" : "none"}
                     border="bordered"
                     position="absolute"
-                    borderRadius="0.4rem"
+                    borderRadius="1rem"
                     padding="2rem"
                     margin="1.5rem 0 0 0"
                     animation="fadeIn"
+                    toolTip={true}
+                    onMouseLeave={() => setID(400)}
                   >
-                    <StyledUlList direction="column" align="start">
+                    <StyledUlList
+                      direction="column"
+                      align="start"
+                      marginBottom="1.6rem"
+                    >
                       {e.subs.map((sub, idx) => (
                         <li key={idx}>
                           <Link to={sub.link}>{sub.label}</Link>
                         </li>
                       ))}
                     </StyledUlList>
-                  </StyledDivWrapper>
+                  </ToolTip>
                 ) : null}
               </li>
             )

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { scaleInterpolated } from "../../styles/animations";
 
 export const StyledNavigationWrapper = styled.div`
   max-width: 160rem;
@@ -17,7 +18,7 @@ export const StyledUlList = styled.ul`
   margin-left: auto;
   padding-left: 0;
   align-items: ${({ align }) => `${align}`};
-  font-weight: 500;
+  font-weight: ${({ fontWeight }) => `${fontWeight}`};
 
   & > li {
     padding: ${({ liPadding }) => liPadding};
@@ -28,6 +29,16 @@ export const StyledUlList = styled.ul`
     & > a {
       text-decoration: none;
       color: ${({ theme }) => theme.primaryDark};
+    }
+
+    &:not(:last-child) {
+      margin-bottom: ${({ marginBottom }) =>
+        marginBottom ? `${marginBottom}` : null};
+    }
+
+    &:hover {
+      ${({ liAnimation }) =>
+        liAnimation === "scale" ? scaleInterpolated : null}
     }
   }
 `;
