@@ -10,7 +10,7 @@ import { OpenerProps } from "../../interfaces/navigation";
 import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 
 const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
-  const websiteConfigData = useSiteConfigQuery();
+  // const websiteConfigData = useSiteConfigQuery();
 
   return (
     <StyledMenuSide open={open}>
