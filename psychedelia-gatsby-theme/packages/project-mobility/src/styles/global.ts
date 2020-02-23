@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     font-size: 62.5%;
     margin: 0;
     padding: 0;
+   
   }
 
   *, *:after, *:before{
@@ -14,6 +15,7 @@ export const GlobalStyles = createGlobalStyle`
   body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     text-rendering: optimizeLegibility;
+    background-color: ${({ theme }) => theme.babyPowder}
   }
 
 `;

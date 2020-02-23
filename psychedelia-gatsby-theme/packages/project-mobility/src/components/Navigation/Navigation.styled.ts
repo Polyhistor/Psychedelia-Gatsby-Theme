@@ -10,6 +10,7 @@ export const StyledNavigation = styled.nav`
   display: flex;
   align-items: center;
   padding: 0 5%;
+  background-color: ${({ background, theme }) => theme[background]};
 `;
 
 export const StyledUlList = styled.ul`
@@ -34,7 +35,7 @@ export const StyledLiList = styled.li`
 
   & > a {
     text-decoration: none;
-    color: ${({ theme }) => theme.primaryDark};
+    color: ${({ theme }) => theme.errieBlack};
 
     &:hover {
       ${({ animation }) =>

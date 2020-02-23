@@ -1,8 +1,17 @@
 import React from "react";
+
+// Components
 import { StyledMenuSide } from "./MenuSide.styled";
+
+// Interfaces
 import { OpenerProps } from "../../interfaces/navigation";
 
+// Configs
+import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
+
 const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
+  const websiteConfigData = useSiteConfigQuery();
+
   return (
     <StyledMenuSide open={open}>
       <a href="/">

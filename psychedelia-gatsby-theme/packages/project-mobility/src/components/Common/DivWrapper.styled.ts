@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { fadeInInterpolated } from "../../styles/animations";
 
 export const StyledDivWrapper = styled.div`
