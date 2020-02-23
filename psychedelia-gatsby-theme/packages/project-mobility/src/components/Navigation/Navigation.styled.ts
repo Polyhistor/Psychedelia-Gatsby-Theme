@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { scaleInterpolated } from "../../styles/animations";
+import { fontScale } from "../../styles/animations";
 
 export const StyledNavigationWrapper = styled.div`
   max-width: 160rem;
@@ -37,8 +37,7 @@ export const StyledUlList = styled.ul`
     }
 
     &:hover {
-      ${({ liAnimation }) =>
-        liAnimation === "scale" ? scaleInterpolated : null}
+      ${({ liAnimation }) => (liAnimation === "scale" ? fontScale : null)}
     }
   }
 `;

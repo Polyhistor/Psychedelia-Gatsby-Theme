@@ -10,20 +10,8 @@ to {
 }
 `;
 
-export const fadeInInterpolated = css`
-  animation: 0.3s ${fadeIn} ease-in;
-`;
-
-export const scale = keyframes`
-  from {
-  scale: 0;
-}
-
-to {
-  scale: 1.1;
-}
-`;
-
-export const scaleInterpolated = css`
-  animation: 0.5s ${scale} ease-in-out;
+export const fontScale = css`
+  transition: font-size 0.2s ease-in;
+  font-size: 2.2rem;
+  font-weight: 700;
 `;
