@@ -5,7 +5,8 @@ import { Link } from "gatsby";
 import {
   StyledNavigation,
   StyledNavigationWrapper,
-  StyledUlList
+  StyledUlList,
+  StyledLiList
 } from "./Navigation.styled";
 import { NavigationLabels } from "../../interfaces/navigation";
 import { NavigationParser } from "../../helpers/navigationParser";
@@ -25,15 +26,15 @@ const Navigation = () => {
     <StyledNavigationWrapper>
       <StyledNavigation>
         <Logo />
-        <StyledUlList
-          align="center"
-          liPadding="0 1.6rem"
-          fontWeight="500"
-          liAnimation="scale"
-        >
+        <StyledUlList align="center" fontWeight="500">
           {NavigationParser(websiteConfigData).map(
             (e: NavigationLabels, idx: number) => (
-              <li onMouseEnter={() => setID(idx)} key={idx}>
+              <StyledLiList
+                padding="0 1.6rem"
+                animation="fontScale"
+                onMouseEnter={() => setID(idx)}
+                key={idx}
+              >
                 <Link to={e.link}>{e.label}</Link>
                 {e.subs ? (
                   <ToolTip
@@ -47,20 +48,20 @@ const Navigation = () => {
                     toolTip={true}
                     onMouseLeave={() => setID(400)}
                   >
-                    <StyledUlList
-                      direction="column"
-                      align="start"
-                      marginBottom="1.6rem"
-                    >
+                    <StyledUlList direction="column" align="start">
                       {e.subs.map((sub, idx) => (
-                        <li key={idx}>
+                        <StyledLiList
+                          marginBottom="1.6rem"
+                          animation="fontScale"
+                          key={idx}
+                        >
                           <Link to={sub.link}>{sub.label}</Link>
-                        </li>
+                        </StyledLiList>
                       ))}
                     </StyledUlList>
                   </ToolTip>
                 ) : null}
-              </li>
+              </StyledLiList>
             )
           )}
         </StyledUlList>

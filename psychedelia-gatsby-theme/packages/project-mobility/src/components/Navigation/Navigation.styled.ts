@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fontScale } from "../../styles/animations";
+import { fontScale, borderBottom } from "../../styles/animations";
 
 export const StyledNavigationWrapper = styled.div`
   max-width: 160rem;
@@ -19,25 +19,30 @@ export const StyledUlList = styled.ul`
   padding-left: 0;
   align-items: ${({ align }) => `${align}`};
   font-weight: ${({ fontWeight }) => `${fontWeight}`};
+`;
 
-  & > li {
-    padding: ${({ liPadding }) => liPadding};
-    list-style: none;
-    font-size: 2rem;
-    text-transform: uppercase;
+export const StyledLiList = styled.li`
+  padding: ${({ padding }) => padding};
+  list-style: none;
+  font-size: 2rem;
+  text-transform: uppercase;
 
-    & > a {
-      text-decoration: none;
-      color: ${({ theme }) => theme.primaryDark};
-    }
+  &:not(:last-child) {
+    margin-bottom: ${({ marginBottom }) =>
+      marginBottom ? `${marginBottom}` : null};
+  }
 
-    &:not(:last-child) {
-      margin-bottom: ${({ marginBottom }) =>
-        marginBottom ? `${marginBottom}` : null};
-    }
+  & > a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.primaryDark};
 
     &:hover {
-      ${({ liAnimation }) => (liAnimation === "scale" ? fontScale : null)}
+      ${({ animation }) =>
+        animation === "fontScale"
+          ? fontScale
+          : animation === "borderBottom"
+          ? borderBottom
+          : null}
     }
   }
 `;
