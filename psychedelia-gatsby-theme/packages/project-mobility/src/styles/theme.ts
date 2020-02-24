@@ -10,5 +10,21 @@ export const theme = {
   errieBlack: "#1A1A1A",
   primaryLight: "#EFFFFA",
   primaryHover: "#343078",
-  mobile: "576px"
+  mobile: "576px",
+
+  // Grommet Icon Specific
+  global: {
+    colors: {
+      icon: "#1A1A1A"
+    }
+  },
+  icon: {
+    size: {
+      small: "12px",
+      medium: "24px",
+      large: "48px",
+      xlarge: "96px"
+    },
+    extend: undefined
+  }
 };

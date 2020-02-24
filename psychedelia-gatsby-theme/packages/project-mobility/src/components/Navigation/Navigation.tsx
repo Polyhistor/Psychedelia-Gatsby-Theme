@@ -9,8 +9,10 @@ import {
   StyledLiList
 } from "./Navigation.styled";
 import { NavigationLabels } from "../../interfaces/navigation";
-import { NavigationParser } from "../../helpers/navigationParser";
 import { ToolTip } from "../Common/ToolTip";
+
+// Helpers
+import { NavigationParser } from "../../helpers/navigationParser";
 
 // Assessts
 import Logo from "../Logo";

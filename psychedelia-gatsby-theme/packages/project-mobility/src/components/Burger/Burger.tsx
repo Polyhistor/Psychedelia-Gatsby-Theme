@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from "react";
+import React from "react";
 import { StyledBurger } from "./Burger.styled";
 import { OpenerProps } from "../../interfaces/navigation";
 

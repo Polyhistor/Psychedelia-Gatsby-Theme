@@ -7,10 +7,14 @@ export const StyledDivWrapper = styled.div`
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   display: ${({ display }) => (display ? `${display}` : "inherit")};
+  align-items: ${({ alignItems }) =>
+    alignItems ? `${alignItems}` : "inherit"};
   border: ${({ border, theme }) =>
     border === "bordered" ? `1px solid ${theme.lightGray}` : null};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
+  max-height: ${({ maxHeight }) => (maxHeight ? `${maxHeight}` : null)};
+  overflow: ${({ overflow }) => (overflow ? `${overflow}` : null)};
 `;
 
 export const ULWrapper = styled.ul``;
