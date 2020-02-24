@@ -21,9 +21,8 @@ export const StyledMenuSide = styled.div<StyledMenuProps>`
     width: 100%;
   }
 
-  span,
   a {
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: 500;
