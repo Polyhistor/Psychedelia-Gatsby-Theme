@@ -11,6 +11,7 @@ import {
 } from "../Navigation/Navigation.styled";
 import { NavigationLabels } from "../../interfaces/navigation";
 import { StyledDivWrapper } from "../Common/DivWrapper.styled";
+import { StyledSpanWrapper } from "../Common/SpanWrapper.styled";
 
 // Interfaces
 import { OpenerProps } from "../../interfaces/navigation";
@@ -24,7 +25,7 @@ import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
   const websiteConfigData = useSiteConfigQuery();
 
-  const [sub, setSub] = useState(false);
+  const [subDisplay, setSubDisplay] = useState(false);
 
   return (
     <StyledMenuSide open={open}>
@@ -34,9 +35,17 @@ const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
             (e: NavigationLabels, idx: number) => (
               <StyledLiList key={idx}>
                 {e.subs ? (
-                  <StyledDivWrapper display="flex" alignItems="center">
-                    <Add size="medium" />
-                    <Link to={e.link}>{e.label}</Link>
+                  <StyledDivWrapper
+                    display="flex"
+                    alignItems="center"
+                    onClick={() => setSubDisplay(!subDisplay)}
+                  >
+                    <StyledSpanWrapper
+                      transform={subDisplay ? "rotate(45deg)" : null}
+                    >
+                      <Add size="medium" />
+                    </StyledSpanWrapper>
+                    <StyledSpanWrapper>{e.label}</StyledSpanWrapper>
                   </StyledDivWrapper>
                 ) : (
                   <StyledDivWrapper display="flex" alignItems="center">

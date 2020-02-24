@@ -5,4 +5,5 @@ import styled from "styled-components";
 
 export const StyledSpanWrapper = styled.span`
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
+  transform: ${({ transform }) => (transform ? `${transform}` : null)};
 `;
