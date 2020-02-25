@@ -6,11 +6,11 @@ export const useOnClickOutside = (
   handler: Dispatch<SetStateAction<boolean>>
 ) => {
   useEffect(() => {
-    const listener = () => {
-      if (!ref.current) {
+    const listener = event => {
+      if (!ref.current || ref.current.contains(event.target)) {
         return;
       }
-      handler(true);
+      handler(event);
     };
 
     document.addEventListener("mousedown", listener);

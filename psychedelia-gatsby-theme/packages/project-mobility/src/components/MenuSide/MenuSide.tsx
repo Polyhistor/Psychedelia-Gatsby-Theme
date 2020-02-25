@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React from "react";
 import { Link } from "gatsby";
 
 // Components
@@ -22,8 +22,6 @@ import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 
 const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
   const websiteConfigData = useSiteConfigQuery();
-
-  const [subDisplay, setSubDisplay] = useState(false);
 
   return (
     <StyledMenuSide open={open}>
