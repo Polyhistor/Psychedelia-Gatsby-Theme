@@ -28,7 +28,7 @@ const Navigation = () => {
     <StyledNavigationWrapper>
       <StyledNavigation>
         <Logo />
-        <StyledUlList align="center" fontWeight="500">
+        <StyledUlList align="center" fontWeight="500" mobile>
           {NavigationParser(websiteConfigData).map(
             (e: NavigationLabels, idx: number) => (
               <StyledLiList

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { fontScale, borderBottom } from "../../styles/animations";
+import media from "styled-media-query";
 
 export const StyledNavigationWrapper = styled.div`
   max-width: 160rem;
@@ -20,6 +21,10 @@ export const StyledUlList = styled.ul`
   padding-left: 0;
   align-items: ${({ align }) => `${align}`};
   font-weight: ${({ fontWeight }) => `${fontWeight}`};
+
+  ${media.lessThan("medium")`
+   ${({ mobile }) => (mobile ? "display:none" : null)}
+  `}
 `;
 
 export const StyledLiList = styled.li`

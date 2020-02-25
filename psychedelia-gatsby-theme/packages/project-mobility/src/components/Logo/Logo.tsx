@@ -1,6 +1,10 @@
 import React from "react";
-import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
+
+// Component
 import { StyledLogo } from "./Logo.styled";
+
+// Config
+import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 
 // TODO - WRITE TESTS
 

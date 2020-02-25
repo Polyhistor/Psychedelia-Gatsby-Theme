@@ -1,8 +1,13 @@
 import React, { useState, useRef, Dispatch, SetStateAction } from "react";
+
+// Components
+import Navigation from "../Navigation";
 import { StyledHeader } from "./Header.styled";
 import { Burger, Menu } from "../../components";
+import { StyledDivWrapper } from "../Common/DivWrapper.styled";
+
+// Helpers
 import { useOnClickOutside } from "../../hooks/";
-import Navigation from "../Navigation";
 
 const Header = (): JSX.Element => {
   const [open, setOpen]: [
@@ -16,11 +21,11 @@ const Header = (): JSX.Element => {
 
   return (
     <StyledHeader>
-      <div ref={node}>
+      <Navigation></Navigation>
+      <StyledDivWrapper ref={node} mobile>
         <Menu open={open} setOpen={setOpen}></Menu>
         <Burger open={open} setOpen={setOpen}></Burger>
-      </div>
-      <Navigation></Navigation>
+      </StyledDivWrapper>
     </StyledHeader>
   );
 };
