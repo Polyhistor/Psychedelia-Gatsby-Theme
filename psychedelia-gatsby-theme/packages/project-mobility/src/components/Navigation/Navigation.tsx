@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, Dispatch, SetStateAction } from "react";
 import { Link } from "gatsby";
 
 // Components
@@ -10,9 +10,11 @@ import {
 } from "./Navigation.styled";
 import { NavigationLabels } from "../../interfaces/navigation";
 import { ToolTip } from "../Common/ToolTip";
+import { Burger } from "../../components";
 
 // Helpers
 import { NavigationParser } from "../../helpers/navigationParser";
+import { useOnClickOutside } from "../../hooks";
 
 // Assessts
 import Logo from "../Logo";
@@ -24,10 +26,20 @@ const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
   const [ID, setID] = useState();
 
+  const [open, setOpen]: [
+    boolean,
+    Dispatch<SetStateAction<boolean>>
+  ] = useState<boolean>(false);
+
+  const node = useRef<HTMLDivElement>();
+
+  useOnClickOutside(node, () => setOpen(false));
+
   return (
     <StyledNavigationWrapper>
       <StyledNavigation>
         <Logo />
+        <Burger open={open} setOpen={setOpen}></Burger>
         <StyledUlList align="center" fontWeight="500" mobile>
           {NavigationParser(websiteConfigData).map(
             (e: NavigationLabels, idx: number) => (

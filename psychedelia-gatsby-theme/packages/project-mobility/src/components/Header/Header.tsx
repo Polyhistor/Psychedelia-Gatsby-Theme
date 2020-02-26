@@ -3,11 +3,12 @@ import React, { useState, useRef, Dispatch, SetStateAction } from "react";
 // Components
 import Navigation from "../Navigation";
 import { StyledHeader } from "./Header.styled";
-import { Burger, Menu } from "../../components";
+import { Menu } from "../../components";
 import { StyledDivWrapper } from "../Common/DivWrapper.styled";
 
 // Helpers
 import { useOnClickOutside } from "../../hooks/";
+import HeaderContext from "../../contexts/headerContext";
 
 const Header = (): JSX.Element => {
   const [open, setOpen]: [
@@ -19,12 +20,13 @@ const Header = (): JSX.Element => {
 
   useOnClickOutside(node, () => setOpen(false));
 
+  console.log(HeaderContext);
+
   return (
     <StyledHeader>
       <Navigation></Navigation>
       <StyledDivWrapper ref={node} mobile>
         <Menu open={open} setOpen={setOpen}></Menu>
-        <Burger open={open} setOpen={setOpen}></Burger>
       </StyledDivWrapper>
     </StyledHeader>
   );
