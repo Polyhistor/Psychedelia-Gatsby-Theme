@@ -1,4 +1,4 @@
-import { createContext, useContext, useState, useMemo } from "react";
+import React, { createContext, useContext, useState, useMemo } from "react";
 
 const HeaderContext = createContext(null);
 
@@ -12,14 +12,14 @@ const useHeaderContext = () => {
   return useHeaderContext;
 };
 
-const HeaderContextProvider = () => {
+const HeaderContextProvider = props => {
   const [headerContext, setHeaderContext] = useState();
 
   const value = useMemo(() => [headerContext, setHeaderContext], [
     headerContext
   ]);
 
-  return <HeaderContext.Provider value={value} />;
+  return <HeaderContext.Provider value={value} {...props} />;
 };
 
 export default {

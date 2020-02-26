@@ -20,14 +20,16 @@ const Header = (): JSX.Element => {
 
   useOnClickOutside(node, () => setOpen(false));
 
-  console.log(HeaderContext);
+  console.log(HeaderContext.HeaderContextProvider);
 
   return (
     <StyledHeader>
-      <Navigation></Navigation>
-      <StyledDivWrapper ref={node} mobile>
-        <Menu open={open} setOpen={setOpen}></Menu>
-      </StyledDivWrapper>
+      <HeaderContext.HeaderContextProvider>
+        <Navigation></Navigation>
+        <StyledDivWrapper ref={node} mobile>
+          <Menu open={open} setOpen={setOpen}></Menu>
+        </StyledDivWrapper>
+      </HeaderContext.HeaderContextProvider>
     </StyledHeader>
   );
 };
