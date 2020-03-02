@@ -1,4 +1,10 @@
-import React, { useState, useRef, Dispatch, SetStateAction } from "react";
+import React, {
+  useState,
+  useContext,
+  useRef,
+  Dispatch,
+  SetStateAction
+} from "react";
 import { Link } from "gatsby";
 
 // Components
@@ -15,6 +21,7 @@ import { Burger } from "../../components";
 // Helpers
 import { NavigationParser } from "../../helpers/navigationParser";
 import { useOnClickOutside } from "../../hooks";
+import HeaderContext from "../../contexts/headerContext";
 
 // Assessts
 import Logo from "../Logo";
@@ -25,6 +32,8 @@ import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
   const [ID, setID] = useState();
+
+  const [headerContext, setHeaderContext] = HeaderContext.useHeaderContext();
 
   const [open, setOpen]: [
     boolean,

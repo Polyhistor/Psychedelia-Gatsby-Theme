@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { StyledMenuProps } from "../../interfaces/navigation";
 
 export const StyledBurger = styled.button<StyledMenuProps>`
-  position: absolute;
   top: 5%;
   left: 2rem;
   display: flex;

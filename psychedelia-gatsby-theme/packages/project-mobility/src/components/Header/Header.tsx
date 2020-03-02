@@ -20,8 +20,6 @@ const Header = (): JSX.Element => {
 
   useOnClickOutside(node, () => setOpen(false));
 
-  console.log(HeaderContext.HeaderContextProvider);
-
   return (
     <StyledHeader>
       <HeaderContext.HeaderContextProvider>
