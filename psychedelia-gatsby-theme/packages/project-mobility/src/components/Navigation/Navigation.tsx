@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useContext,
-  useRef,
-  Dispatch,
-  SetStateAction
-} from "react";
+import React, { useState, useRef, Dispatch, SetStateAction } from "react";
 import { Link } from "gatsby";
 
 // Components
