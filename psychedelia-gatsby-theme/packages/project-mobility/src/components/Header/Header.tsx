@@ -1,4 +1,4 @@
-import React, { useState, useRef, Dispatch, SetStateAction } from "react";
+import React from "react";
 
 // Components
 import Navigation from "../Navigation";
@@ -11,8 +11,6 @@ import { StyledDivWrapper } from "../Common/DivWrapper.styled";
 import HeaderContext from "../../contexts/headerContext";
 
 const Header = (): JSX.Element => {
-  const node = useRef<HTMLDivElement>();
-
   return (
     <StyledHeader>
       <HeaderContext.HeaderContextProvider>

@@ -12,6 +12,9 @@ export const StyledNavigation = styled.nav`
   align-items: center;
   padding: 0 5%;
   background-color: ${({ background, theme }) => theme[background]};
+  ${media.lessThan("medium")`
+    justify-content: space-between 
+  `}
 `;
 
 export const StyledUlList = styled.ul`

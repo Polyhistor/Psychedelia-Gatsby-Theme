@@ -1,4 +1,4 @@
-import React, { useState, useRef, Dispatch, SetStateAction } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "gatsby";
 
 // Components
@@ -28,7 +28,7 @@ const Navigation = () => {
   const [ID, setID] = useState();
   const [headerContext, setHeaderContext] = HeaderContext.useHeaderContext();
   const node = useRef<HTMLDivElement>();
-  useOnClickOutside(node, () => setHeaderContext(false));
+  useOnClickOutside(node, () => setHeaderContext());
 
   return (
     <StyledNavigationWrapper ref={node}>

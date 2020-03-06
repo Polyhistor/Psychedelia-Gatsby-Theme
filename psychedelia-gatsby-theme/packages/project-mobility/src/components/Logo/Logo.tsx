@@ -1,7 +1,7 @@
 import React from "react";
 
 // Component
-import { StyledLogo } from "./Logo.styled";
+import { StyledImage } from "../Common/Image.styled";
 
 // Config
 import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
@@ -13,10 +13,12 @@ const Logo = () => {
 
   return (
     <span>
-      <StyledLogo
+      <StyledImage
         url={websiteConfigData[0].node.logo.file.url}
         alt="Mobility Aid Logo"
-      ></StyledLogo>
+        width="22rem"
+        height="auto"
+      ></StyledImage>
     </span>
   );
 };
