@@ -26,23 +26,15 @@ import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 const Navigation = () => {
   const websiteConfigData = useSiteConfigQuery();
   const [ID, setID] = useState();
-
   const [headerContext, setHeaderContext] = HeaderContext.useHeaderContext();
-
-  const [open, setOpen]: [
-    boolean,
-    Dispatch<SetStateAction<boolean>>
-  ] = useState<boolean>(false);
-
   const node = useRef<HTMLDivElement>();
-
-  useOnClickOutside(node, () => setOpen(false));
+  useOnClickOutside(node, () => setHeaderContext(false));
 
   return (
-    <StyledNavigationWrapper>
+    <StyledNavigationWrapper ref={node}>
       <StyledNavigation>
         <Logo />
-        <Burger open={open} setOpen={setOpen}></Burger>
+        <Burger open={headerContext} setOpen={setHeaderContext}></Burger>
         <StyledUlList align="center" fontWeight="500" mobile>
           {NavigationParser(websiteConfigData).map(
             (e: NavigationLabels, idx: number) => (

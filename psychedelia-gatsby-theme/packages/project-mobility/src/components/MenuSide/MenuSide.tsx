@@ -16,15 +16,17 @@ import { OpenerProps } from "../../interfaces/navigation";
 
 // Helpers
 import { NavigationParser } from "../../helpers/navigationParser";
+import HeaderContext from "../../contexts/headerContext";
 
 // Configs
 import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 
 const MenuSide = ({ open, setOpen }: OpenerProps): JSX.Element => {
   const websiteConfigData = useSiteConfigQuery();
+  const [headerContext] = HeaderContext.useHeaderContext();
 
   return (
-    <StyledMenuSide open={open}>
+    <StyledMenuSide open={headerContext}>
       <StyledNavigation>
         <StyledUlList direction="column">
           {NavigationParser(websiteConfigData).map(

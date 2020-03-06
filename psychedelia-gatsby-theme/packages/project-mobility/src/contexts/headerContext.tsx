@@ -9,11 +9,11 @@ const useHeaderContext = () => {
     throw new Error("useHeader must be used within a success provider");
   }
 
-  return useHeaderContext;
+  return context;
 };
 
 const HeaderContextProvider = props => {
-  const [headerContext, setHeaderContext] = useState();
+  const [headerContext, setHeaderContext] = useState(false);
 
   const value = useMemo(() => [headerContext, setHeaderContext], [
     headerContext

@@ -5,9 +5,11 @@ export const useOnClickOutside = (
   ref: React.MutableRefObject<HTMLDivElement>,
   handler: Dispatch<SetStateAction<boolean>>
 ) => {
+  console.log(ref);
+
   useEffect(() => {
     const listener = event => {
-      if (!ref.current || ref.current.contains(event.target)) {
+      if (ref.current.contains(event.target)) {
         return;
       }
       handler(event);
