@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { StyledMenuProps } from "../../interfaces/navigation";
+import media from "styled-media-query";
 
 export const StyledBurger = styled.button<StyledMenuProps>`
   top: 5%;
@@ -42,4 +43,8 @@ export const StyledBurger = styled.button<StyledMenuProps>`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+
+  ${media.greaterThan("medium")`
+    display: none;
+  `}
 `;

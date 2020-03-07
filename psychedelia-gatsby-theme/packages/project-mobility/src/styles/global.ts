@@ -17,4 +17,9 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
+  main {
+    max-width: 160rem;
+    margin: 0 auto;
+  }
+
 `;

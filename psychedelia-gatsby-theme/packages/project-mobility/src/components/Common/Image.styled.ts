@@ -5,7 +5,7 @@ export const StyledImage = styled.img.attrs(props => ({
   src: `${props.url}`,
   alt: `${props.alt}`
 }))`
-  width: ${({ width }) => `${width}`};
-  height: ${({ height }) => `${height}`};
+  width: ${({ width }) => (width ? `${width}` : null)};
+  height: ${({ height }) => (height ? `${height}` : null)};
   border-radius: ${({ borderRadius }) => `${borderRadius}`};
 `;
