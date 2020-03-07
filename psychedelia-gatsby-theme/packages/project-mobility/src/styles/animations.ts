@@ -17,5 +17,5 @@ export const fontScale = css`
 `;
 
 export const borderBottom = css`
-  border-bottom: ${({ theme }) => `1px solid ${theme.lightGray}`};
+  border-bottom: ${({ theme }) => `1px solid ${theme.silverChalic}`};
 `;

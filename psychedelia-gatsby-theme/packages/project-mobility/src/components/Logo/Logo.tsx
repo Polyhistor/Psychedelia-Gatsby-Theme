@@ -3,11 +3,10 @@ import React from "react";
 // Component
 import { StyledImage } from "../Common/Image.styled";
 
-// Config
+// Queries
 import useSiteConfigQuery from "../../queries/useSiteConfigQuery";
 
 // TODO - WRITE TESTS
-
 const Logo = () => {
   const websiteConfigData = useSiteConfigQuery();
 

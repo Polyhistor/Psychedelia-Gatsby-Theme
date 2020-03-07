@@ -1,6 +1,5 @@
 export const theme = {
   primaryDark: "#5d5d5d",
-  lightGray: "#adadad",
   queenPink: "#E8D4D9",
   ube: "#7E7CD3",
   platinum: "#E7E7E7",
@@ -10,6 +9,7 @@ export const theme = {
   errieBlack: "#1A1A1A",
   primaryLight: "#EFFFFA",
   primaryHover: "#343078",
+  blueCrayola: "#337AFF",
   mobile: "576px",
 
   // Grommet Icon Specific

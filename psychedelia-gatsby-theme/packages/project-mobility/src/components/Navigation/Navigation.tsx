@@ -9,7 +9,7 @@ import {
   StyledLiList
 } from "./Navigation.styled";
 import { NavigationLabels } from "../../interfaces/navigation";
-import { ToolTip } from "../Common/ToolTip";
+import { StyledToolTip } from "../Common/ToolTip.styled";
 import { Burger } from "../../components";
 
 // Helpers
@@ -46,7 +46,7 @@ const Navigation = () => {
               >
                 <Link to={e.link}>{e.label}</Link>
                 {e.subs ? (
-                  <ToolTip
+                  <StyledToolTip
                     display={idx === ID ? "block" : "none"}
                     border="bordered"
                     position="absolute"
@@ -68,7 +68,7 @@ const Navigation = () => {
                         </StyledLiList>
                       ))}
                     </StyledUlList>
-                  </ToolTip>
+                  </StyledToolTip>
                 ) : null}
               </StyledLiList>
             )
