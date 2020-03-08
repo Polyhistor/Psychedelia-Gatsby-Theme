@@ -27,7 +27,7 @@ const BannerLanding = () => {
             fontSize="2rem"
             maxWidth="57rem"
             fontWeight="300"
-            margin="3.6rem 0"
+            margin="1.6rem 0"
             padding="1.5rem 0"
             borderTop="1px solid gray"
             borderBottom="1px solid gray"
