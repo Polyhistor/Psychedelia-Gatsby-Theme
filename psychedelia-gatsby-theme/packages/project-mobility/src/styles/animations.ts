@@ -19,3 +19,11 @@ export const fontScale = css`
 export const borderBottom = css`
   border-bottom: ${({ theme }) => `1px solid ${theme.silverChalic}`};
 `;
+
+export const scale = css`
+  transition: all 0.2s ease-in;
+  border: 1px solid #e7e7e7;
+  background: white;
+  z-index: 1000;
+  transform: scale(1.05);
+`;

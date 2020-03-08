@@ -5,7 +5,8 @@ export const H1 = styled.h1`
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
   line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}` : null)};
   max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}` : null)};
-  text-transform: uppercase;
+  text-transform: ${({ textTransform }) =>
+    textTransform ? `${textTransform}` : null};
 `;
 
 export const H2 = styled.h2`
@@ -22,4 +23,6 @@ export const H2 = styled.h2`
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
 `;
-export const P = styled.p``;
+export const P = styled.p`
+  font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
+`;

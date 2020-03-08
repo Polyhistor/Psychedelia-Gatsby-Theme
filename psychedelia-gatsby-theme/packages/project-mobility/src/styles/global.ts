@@ -22,4 +22,8 @@ export const GlobalStyles = createGlobalStyle`
     margin: 0 auto;
   }
 
+  .gatsby-image-wrapper{
+    border-radius: 0.4rem;
+  }
+
 `;

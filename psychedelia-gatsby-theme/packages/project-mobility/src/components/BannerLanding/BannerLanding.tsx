@@ -1,10 +1,10 @@
 import React from "react";
+import Img from "gatsby-image";
 
 // Components
 import {
   StyledSectionWrapper,
   StyledDivWrapper,
-  StyledImage,
   StyledButtonPrimary,
   H1,
   H2
@@ -20,7 +20,7 @@ const BannerLanding = () => {
     <StyledSectionWrapper margin="5rem 0 0 0" padding="0 16em">
       <StyledDivWrapper display="grid" gridColumns="50% 50%">
         <StyledDivWrapper margin="0rem 2rem 0rem 0rem">
-          <H1 fontSize="8em" lineHeight="1em" maxWidth="44rem" margin="0">
+          <H1 fontSize="9.5em" lineHeight="1em" maxWidth="44rem" margin="0">
             {landingBannerData.title}
           </H1>
           <H2
@@ -40,13 +40,10 @@ const BannerLanding = () => {
           </StyledButtonPrimary>
         </StyledDivWrapper>
         <StyledDivWrapper>
-          <StyledImage
-            url={
-              landingBannerData.banner.localFile.childImageSharp.fluid.srcWebp
-            }
-            borderRadius="0.4rem"
-            width="100%"
-          ></StyledImage>
+          <Img
+            fluid={landingBannerData.banner.localFile.childImageSharp.fluid}
+            alt="New Zealand Mobility Aid"
+          ></Img>
         </StyledDivWrapper>
       </StyledDivWrapper>
     </StyledSectionWrapper>

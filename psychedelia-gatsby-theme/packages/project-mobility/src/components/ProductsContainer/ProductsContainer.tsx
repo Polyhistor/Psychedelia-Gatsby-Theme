@@ -1,10 +1,26 @@
-import React from "react"
-import {StyledSectionWrapper} from "../Common"
+import React from "react";
+import { StyledSectionWrapper, StyledDivWrapper } from "../Common";
+import CategoryBox from "../CategoryBox/CategoryBox";
+
+// Queries
+import useCategoryBox from "../../queries/useCategoryBox";
 
 const ProductsContainer = () => {
-    return(<div><StyledSectionWrapper>
-        </StyledSectionWrapper>
-        </div>)
-}
+  const productsContainerData = useCategoryBox();
 
-export default ProductsContainer
+  return (
+    <StyledSectionWrapper padding="0 10rem" margin="6rem 0">
+      <StyledDivWrapper display="flex">
+        {productsContainerData.map(e => (
+          <CategoryBox
+            title={e.node.title}
+            description={e.node.description}
+            banner={e.node.banner.localFile.childImageSharp.fluid}
+          ></CategoryBox>
+        ))}
+      </StyledDivWrapper>
+    </StyledSectionWrapper>
+  );
+};
+
+export default ProductsContainer;

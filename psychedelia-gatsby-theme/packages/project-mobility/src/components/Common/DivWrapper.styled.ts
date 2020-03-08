@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { fadeInInterpolated } from "../../styles/animations";
+import { fadeInInterpolated, scale } from "../../styles/animations";
 
 export const StyledDivWrapper = styled.div`
   ${({ animation }) => (animation === "fadeIn" ? fadeInInterpolated : null)};
@@ -17,6 +17,10 @@ export const StyledDivWrapper = styled.div`
   overflow: ${({ overflow }) => (overflow ? `${overflow}` : null)};
   grid-template-columns: ${({ gridColumns }) =>
     gridColumns ? `${gridColumns}` : null};
+
+  &:hover {
+    ${({ hover }) => (hover === "scale" ? scale : null)}
+  }
 `;
 
 export const ULWrapper = styled.ul``;

@@ -1,19 +1,18 @@
-import {graphql, useStaticQuery} from "gatsby"
+import { graphql, useStaticQuery } from "gatsby";
 
 const useCategoryBox = () => {
-    const CategoryBoxData = useStaticQuery(graphql`
+  const CategoryBoxData = useStaticQuery(graphql`
     query {
-        allContentfulCategoryBox {
-          edges {
-            node {
-              title
-              description 
-              banner {
-                localFile {
-                  childImageSharp {
-                    fluid {
-                        ...GatsbyImageSharpFluid_withWebp
-                    }
+      allContentfulCategoryBox {
+        edges {
+          node {
+            title
+            description
+            banner {
+              localFile {
+                childImageSharp {
+                  fluid(maxWidth: 1000, quality: 100) {
+                    ...GatsbyImageSharpFluid_withWebp
                   }
                 }
               }
@@ -21,5 +20,10 @@ const useCategoryBox = () => {
           }
         }
       }
-    `)
-}
+    }
+  `);
+
+  return CategoryBoxData.allContentfulCategoryBox.edges;
+};
+
+export default useCategoryBox;
