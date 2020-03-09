@@ -6,7 +6,12 @@ export const StyledDivWrapper = styled.div`
   position: ${({ position }) => (position ? `${position}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
+  direction: ${({ direction }) => (direction === "right" ? `rtl` : null)};
   display: ${({ display }) => `${display}`};
+  flex-direction: ${({ flexDirection }) =>
+    flexDirection ? `${flexDirection}` : null};
+  justify-content: ${({ justifyContent }) =>
+    justifyContent ? `${justifyContent}` : null};
   align-items: ${({ alignItems }) =>
     alignItems ? `${alignItems}` : "inherit"};
   border: ${({ border, theme }) =>
@@ -17,6 +22,9 @@ export const StyledDivWrapper = styled.div`
   overflow: ${({ overflow }) => (overflow ? `${overflow}` : null)};
   grid-template-columns: ${({ gridColumns }) =>
     gridColumns ? `${gridColumns}` : null};
+  width: ${({ width }) => (width ? `${width}` : null)};
+  grid-column-gap: ${({ gridColumnGap }) =>
+    gridColumnGap ? `${gridColumnGap}` : null};
 
   &:hover {
     ${({ hover }) => (hover === "scale" ? scale : null)}

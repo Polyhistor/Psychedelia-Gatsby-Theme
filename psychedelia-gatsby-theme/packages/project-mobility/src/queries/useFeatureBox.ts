@@ -6,6 +6,7 @@ const useFeatureBox = () => {
       allContentfulFeatureBox {
         edges {
           node {
+            contentfulid
             title
             subtitle
             description {
@@ -20,6 +21,7 @@ const useFeatureBox = () => {
                 }
               }
             }
+            orientation
           }
         }
       }

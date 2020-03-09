@@ -11,6 +11,8 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
+  color: ${({ color, theme }) =>
+    color === "blue" ? `${theme.blueCrayola}` : null};
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
@@ -22,7 +24,11 @@ export const H2 = styled.h2`
     borderBottom ? `${borderBottom}` : null};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
+  direction: ${({ direction }) => (direction === "right" ? "ltr" : null)};
 `;
+
 export const P = styled.p`
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
+  margin: ${({ margin }) => (margin ? `${margin}` : null)};
+  direction: ${({ direction }) => (direction === "right" ? "ltr" : null)};
 `;
