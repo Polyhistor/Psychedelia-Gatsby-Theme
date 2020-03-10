@@ -2,14 +2,13 @@ import React from "react";
 
 // Components
 import FeatureBox from "../FeatureBox/FeatureBox";
-import { StyledSectionWrapper, StyledDivWrapper } from "../Common";
+import { StyledSectionWrapper } from "../Common";
 
 // Queries
 import useFeatureBox from "../../queries/useFeatureBox";
 
 const FeatureBoxContainer = () => {
   const featureBoxData = useFeatureBox();
-  console.log(featureBoxData);
 
   return (
     <StyledSectionWrapper padding="0 10rem">

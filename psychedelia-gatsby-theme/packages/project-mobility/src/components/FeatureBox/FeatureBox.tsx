@@ -5,7 +5,6 @@ import Img from "gatsby-image";
 import { StyledDivWrapper, H2, P } from "../Common";
 
 const FeatureBox = ({ title, subtitle, description, banner, direction }) => {
-  console.log(direction);
   return (
     <Fragment>
       <StyledDivWrapper
@@ -20,7 +19,14 @@ const FeatureBox = ({ title, subtitle, description, banner, direction }) => {
           flexDirection="column"
           justifyContent="center"
         >
-          <H2 fontSize="9.3rem" lineHeight="1" margin="0" direction={direction}>
+          <H2
+            fontSize="9.3rem"
+            lineHeight="1"
+            margin="0"
+            direction={direction}
+            borderBottom="11px solid #FCFCFC"
+            padding="0 0 2rem 0"
+          >
             {title}
           </H2>
           <H2
