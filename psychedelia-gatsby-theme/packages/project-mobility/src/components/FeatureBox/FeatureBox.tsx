@@ -20,20 +20,18 @@ const FeatureBox = ({ title, subtitle, description, banner, direction }) => {
           justifyContent="center"
         >
           <H2
-            fontSize="9.3rem"
+            fontSize="9em"
             lineHeight="1"
             margin="0"
             direction={direction}
             borderBottom="11px solid #FCFCFC"
-            padding="0 0 2rem 0"
           >
             {title}
           </H2>
           <H2
-            fontSize="3.8rem"
+            fontSize="4em"
             as="h3"
             color="blue"
-            margin="3rem 0 0.3rem 0"
             direction={direction}
           >
             {subtitle}

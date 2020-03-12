@@ -10,7 +10,6 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
   color: ${({ color, theme }) =>
     color === "blue" ? `${theme.blueCrayola}` : null};
   border: ${({ border }) => (border ? `${border}` : null)};

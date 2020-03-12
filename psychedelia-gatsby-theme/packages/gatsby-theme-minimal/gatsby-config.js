@@ -17,7 +17,7 @@ module.exports = themeOptions => {
         options: {
           spaceId: themeOptions.contentful.spaceId,
           accessToken: themeOptions.contentful.accessToken,
-          downloadLocal: themeOptions.contentful.downloadLocal
+          downloadLocal: themeOptions.contentful.downloadLocal, 
         }
       }
     ]
