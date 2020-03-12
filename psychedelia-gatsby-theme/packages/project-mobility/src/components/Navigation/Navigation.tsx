@@ -54,6 +54,7 @@ const Navigation = () => {
                     padding="2rem"
                     margin="1.5rem 0 0 0"
                     animation="fadeIn"
+                    background="white"
                     toolTip={true}
                     onMouseLeave={() => setID(400)}
                   >

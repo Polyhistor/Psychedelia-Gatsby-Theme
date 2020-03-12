@@ -5,21 +5,28 @@ import Facts from "./Facts";
 import {
   StyledSectionWrapper,
   StyledDivWrapper,
-  StyledSpanWrapper,
   H2
 } from "../Common";
 
-const FactsContainer = () => (
-  <StyledSectionWrapper padding="0 10rem">
+// Queries
+import useSiteConfigQuery from "../../queries/useSiteConfigQuery"
+
+const FactsContainer = () => {
+  const factsLabel = useSiteConfigQuery()[0].node.factsLabel
+
+  return (
+    <StyledSectionWrapper padding="0 10rem">
     <StyledDivWrapper display="flex">
       <Facts></Facts>
-      <StyledDivWrapper display="flxe" justifyContent="center">
-        <H2 fontSize="16rem" border="11px solid #FCFCFC;" margin="0 0 0 5rem">
-          Sold To Date!
+      <StyledDivWrapper border="thick-bordered" display="flxe" justifyContent="center" width="50%">
+        <H2 fontSize="10em"  margin="0 0 0 5rem" display="flex" alignItems="center">
+          {factsLabel}
         </H2>
       </StyledDivWrapper>
     </StyledDivWrapper>
   </StyledSectionWrapper>
-);
+  )
+
+}
 
 export default FactsContainer;

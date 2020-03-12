@@ -6,6 +6,7 @@ const useSiteConfigQuery = () => {
       allContentfulSiteConfig {
         edges {
           node {
+
             navigationLabels {
               internal {
                 content
@@ -14,6 +15,15 @@ const useSiteConfigQuery = () => {
             logo {
               file {
                 url
+              }
+            }
+            factsLabel
+            footerLabels {
+              label 
+              link
+              subs {
+                label 
+                link
               }
             }
           }

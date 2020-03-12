@@ -4,6 +4,7 @@ import { fadeInInterpolated, scale } from "../../styles/animations";
 export const StyledDivWrapper = styled.div`
   ${({ animation }) => (animation === "fadeIn" ? fadeInInterpolated : null)};
   position: ${({ position }) => (position ? `${position}` : null)};
+  background: ${({ background }) => (background ? `${background}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   direction: ${({ direction }) => (direction === "right" ? `rtl` : null)};
@@ -15,7 +16,7 @@ export const StyledDivWrapper = styled.div`
   align-items: ${({ alignItems }) =>
     alignItems ? `${alignItems}` : "inherit"};
   border: ${({ border, theme }) =>
-    border === "bordered" ? `1px solid ${theme.silverChalic}` : null};
+    border === "bordered" ? `1px solid ${theme.silverChalic}` : border === "thick-bordered" ? `11px solid ${theme.babyPowder}` : null};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
   max-height: ${({ maxHeight }) => (maxHeight ? `${maxHeight}` : null)};
@@ -25,6 +26,7 @@ export const StyledDivWrapper = styled.div`
   width: ${({ width }) => (width ? `${width}` : null)};
   grid-column-gap: ${({ gridColumnGap }) =>
     gridColumnGap ? `${gridColumnGap}` : null};
+  z-index: ${({ zIndex }) => (zIndex ? `${zIndex}` : null)};
 
   &:hover {
     ${({ hover }) => (hover === "scale" ? scale : null)}

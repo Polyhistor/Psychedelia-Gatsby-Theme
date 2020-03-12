@@ -13,6 +13,8 @@ export const H2 = styled.h2`
   color: ${({ color, theme }) =>
     color === "blue" ? `${theme.blueCrayola}` : null};
   border: ${({ border }) => (border ? `${border}` : null)};
+  display: ${({ display }) => (display ? `${display}` : null)};
+  align-items: ${({ alignItems }) => (alignItems ? `${alignItems}` : null)};
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
