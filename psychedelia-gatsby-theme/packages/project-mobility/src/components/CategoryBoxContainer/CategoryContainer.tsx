@@ -1,17 +1,19 @@
 import React from "react";
+
+// Components
 import { StyledSectionWrapper, StyledDivWrapper } from "../Common";
 import CategoryBox from "../CategoryBox/CategoryBox";
 
 // Queries
 import useCategoryBox from "../../queries/useCategoryBox";
 
-const ProductsContainer = () => {
-  const productsContainerData = useCategoryBox();
+const CategoryContainer = () => {
+  const categoryContainerData = useCategoryBox();
 
   return (
     <StyledSectionWrapper padding="0 10rem" margin="6rem 0">
       <StyledDivWrapper display="flex">
-        {productsContainerData.map((e, i) => (
+        {categoryContainerData.map((e, i) => (
           <CategoryBox
             key={i}
             title={e.node.title}
@@ -24,4 +26,4 @@ const ProductsContainer = () => {
   );
 };
 
-export default ProductsContainer;
+export default CategoryContainer;

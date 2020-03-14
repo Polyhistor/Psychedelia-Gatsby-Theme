@@ -1,4 +1,5 @@
 module.exports = themeOptions => {
+  console.log(themeOptions)
   return {
     plugins: [
       `gatsby-plugin-remove-trailing-slashes`,
@@ -18,6 +19,14 @@ module.exports = themeOptions => {
           spaceId: themeOptions.contentful.spaceId,
           accessToken: themeOptions.contentful.accessToken,
           downloadLocal: themeOptions.contentful.downloadLocal, 
+        }
+      },
+      {
+        resolve: "gatsby-plugin-page-progress",
+        options: {
+          includePaths: themeOptions.pageProgress.includePaths,
+          height: themeOptions.pageProgress.includePaths,
+          color: themeOptions.pageProgress.color
         }
       }
     ]

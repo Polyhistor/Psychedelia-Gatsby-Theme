@@ -6663,6 +6663,11 @@ gatsby-plugin-page-creator@^2.1.40:
     lodash "^4.17.15"
     micromatch "^3.1.10"
 
+gatsby-plugin-page-progress@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-page-progress/-/gatsby-plugin-page-progress-2.0.16.tgz#cb1b392490d5ee0be4cbe3dce1db2d24c888e430"
+  integrity sha512-1dDUbsvjNCWdh5pammrJaCkCeE4Tk2YLxeh7N7WWHbsJ+BDqpuCxaXb/dw+ph2uVY595kJQXZTxP5hGAsK8SqA==
+
 gatsby-plugin-playground@^1.0.6:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-playground/-/gatsby-plugin-playground-1.0.6.tgz#15108395cbfd0795cbd6698a21e123ed6e571a93"

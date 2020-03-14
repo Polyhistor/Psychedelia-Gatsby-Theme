@@ -7,12 +7,14 @@ import { Menu } from "../../components";
 import { StyledDivWrapper } from "../Common/DivWrapper.styled";
 
 // Helpers
-// import { useOnClickOutside } from "../../hooks/";
 import HeaderContext from "../../contexts/headerContext";
+import {useScrollHandler} from "../../hooks/useScroll"
 
 const Header = (): JSX.Element => {
+  const scroll = useScrollHandler()
+
   return (
-    <StyledHeader>
+    <StyledHeader scroll={scroll}>
       <HeaderContext.HeaderContextProvider>
         <Navigation></Navigation>
         <StyledDivWrapper mobile>
