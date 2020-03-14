@@ -34,7 +34,7 @@ const BannerLanding = () => {
             {landingBannerData.callToAction}
           </StyledButtonPrimary>
         </StyledDivWrapper>
-        <StyledDivWrapper>
+        <StyledDivWrapper zIndex="-1">
           <Img
             fluid={landingBannerData.banner.localFile.childImageSharp.fluid}
             alt="New Zealand Mobility Aid"

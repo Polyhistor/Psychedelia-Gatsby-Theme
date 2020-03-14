@@ -1,6 +1,7 @@
 export const theme = {
   primaryDark: "#5d5d5d",
   queenPink: "#E8D4D9",
+  palePink: "#ECDBDF",
   ube: "#7E7CD3",
   platinum: "#E7E7E7",
   silverChalic: "#ADADAD",

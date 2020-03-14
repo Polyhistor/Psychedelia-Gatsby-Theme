@@ -19,6 +19,7 @@ export const H2 = styled.h2`
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
   font-weight: ${({ fontWeight }) => (fontWeight ? `${fontWeight}` : null)};
+  text-transform: ${({ textTransform }) => (textTransform ? `${textTransform}` : null)};
   line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}` : null)};
   max-width: ${({ maxWidth }) => (maxWidth ? `${maxWidth}` : null)};
   border-top: ${({ borderTop }) => (borderTop ? `${borderTop}` : null)};

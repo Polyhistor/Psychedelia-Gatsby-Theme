@@ -15,6 +15,9 @@ export const StyledDivWrapper = styled.div`
     justifyContent ? `${justifyContent}` : null};
   align-items: ${({ alignItems }) =>
     alignItems ? `${alignItems}` : "inherit"};
+  grid-template-columns: ${({ gridTemplateColumns }) =>
+    gridTemplateColumns ? `${gridTemplateColumns}` : "inherit"};
+  border-top: ${({ borderTop }) => (borderTop ? `${borderTop}` : null)};
   border: ${({ border, theme }) =>
     border === "bordered" ? `1px solid ${theme.silverChalic}` : border === "thick-bordered" ? `11px solid ${theme.babyPowder}` : null};
   border-radius: ${({ borderRadius }) =>

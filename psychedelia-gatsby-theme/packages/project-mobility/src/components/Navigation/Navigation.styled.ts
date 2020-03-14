@@ -36,7 +36,7 @@ export const StyledLiList = styled.li`
   padding: ${({ padding }) => padding};
   list-style: none;
   font-size: 2rem;
-  text-transform: uppercase;
+  text-transform: ${({ textTransform }) => (textTransform ? `${textTransform}` : null)};
 
   &:not(:last-child) {
     margin-bottom: ${({ marginBottom }) =>

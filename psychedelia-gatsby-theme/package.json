@@ -15,6 +15,7 @@
   ],
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.6",
+    "countup.js": "^2.0.4",
     "dotenv": "^8.2.0",
     "formik": "^2.1.4",
     "gatsby": "^2.19.17",

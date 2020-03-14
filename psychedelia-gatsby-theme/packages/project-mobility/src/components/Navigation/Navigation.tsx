@@ -40,13 +40,15 @@ const Navigation = () => {
             (e: NavigationLabels, idx: number) => (
               <StyledLiList
                 padding="0 1.6rem"
-                animation="fontScale"
-                onMouseEnter={() => setID(idx)}
+                animation="fontScale"                                                                 
+                onMouseEnter={() => setID(idx)}                                                                                  
                 key={idx}
-              >
+                textTransform="uppercase"       
+                 
+              >        
                 <Link to={e.link}>{e.label}</Link>
                 {e.subs ? (
-                  <StyledToolTip
+                  <StyledToolTip                                      
                     display={idx === ID ? "block" : "none"}
                     border="bordered"
                     position="absolute"

@@ -4,6 +4,9 @@ import Img from "gatsby-image";
 // Components
 import { StyledDivWrapper, H2, P } from "../Common";
 
+// Helpers
+import { theme } from '../../styles/theme';
+
 const FeatureBox = ({ title, subtitle, description, banner, direction }) => {
   return (
     <Fragment>
@@ -12,7 +15,8 @@ const FeatureBox = ({ title, subtitle, description, banner, direction }) => {
         gridColumns="50% 50%"
         gridColumnGap="8.6rem"
         direction={direction}
-        margin="8rem 0"
+        padding="8rem 0"
+        borderTop={`11px solid ${theme.palePink}`}
       >
         <StyledDivWrapper
           display="flex"
