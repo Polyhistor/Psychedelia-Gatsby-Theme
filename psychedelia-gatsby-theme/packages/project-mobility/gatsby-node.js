@@ -7,20 +7,6 @@ exports.createPages = async({graphql, actions}, themeOptions) => {
         edges {
           node {
             slug 
-            productTitle
-            productDescription {
-              productDescription
-            }
-            productSpecification {
-              productSpecification
-            }
-            productDimension {
-              productDimension
-            }
-            priceList {
-              price 
-              label
-            }
           }
         }
       }
