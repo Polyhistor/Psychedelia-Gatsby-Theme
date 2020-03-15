@@ -1,9 +1,15 @@
 import React from "react";
+
+// Components
+import { Header } from "../components";
+import Footer from "../components/Footer/Footer"
+
+// Helpers
 import { ThemeProvider } from "styled-components";
 import { GlobalStyles } from "../styles/global";
 import { theme } from "../styles/theme";
 import { Wrapper } from "../interfaces/navigation";
-import { Header } from "../components";
+
 
 const Layout = ({ children }: Wrapper) => (
   <ThemeProvider theme={theme}>
@@ -11,6 +17,7 @@ const Layout = ({ children }: Wrapper) => (
       <GlobalStyles />
       <Header></Header>
       <main>{children}</main>
+      <Footer></Footer>
     </>
   </ThemeProvider>
 );

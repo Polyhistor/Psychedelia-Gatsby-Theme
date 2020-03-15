@@ -10,7 +10,7 @@ const CategoryBox = ({ title, description, banner }) => {
         {title}
       </H2>
       <P fontSize="1.6rem">{description}</P>
-      <Img style={{ height: "37rem" }} fluid={banner} alt={title}></Img>
+      <Img  fluid={banner} alt={title}></Img>
     </StyledDivWrapper>
   );
 };

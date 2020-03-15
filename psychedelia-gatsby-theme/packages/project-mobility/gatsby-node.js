@@ -18,7 +18,7 @@ exports.createPages = async({graphql, actions}, themeOptions) => {
         process.exit(1)
     }
    
-    const productsTemplate = require.resolve('./src/templates/products.js')
+    const productsTemplate = require.resolve('./src/templates/products.tsx')
     const productsData = result.data.allContentfulProducts.edges
 
     productsData.forEach(product=> {
