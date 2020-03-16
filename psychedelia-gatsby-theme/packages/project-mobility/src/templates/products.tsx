@@ -17,17 +17,13 @@ const Products = ({ data, pageContext }) => {
         }
       ></BannerProducts>
       <ProductsInfo
-        titles={Object.keys(data.contentfulProducts).slice(1,5)}
-        description={
-          data.contentfulProducts.productDescription.productDescription
-        }
-        specification= {
-            data.contentfulProducts.productSpecification.productSpecification
-        }
-        productDimensions= {
-            data.contentfulProducts.productDimension.productDimension
-        }
-        images={data.contentfulProducts.gallery}
+        titles={Object.keys(data.contentfulProducts).slice(2, 5)}
+        information={[
+         [ data.contentfulProducts.productDescription.productDescription,
+          data.contentfulProducts.productSpecification.productSpecification,
+          data.contentfulProducts.productDimension.productDimension],
+          data.contentfulProducts.gallery
+        ]}
       ></ProductsInfo>
     </Layout>
   );
