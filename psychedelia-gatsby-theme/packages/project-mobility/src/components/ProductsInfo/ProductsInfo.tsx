@@ -1,5 +1,13 @@
 import React from "react";
 import Img from "gatsby-image";
+import {
+  Link,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from "react-scroll";
 
 // Components
 import { StyledSectionWrapper, StyledDivWrapper, H2, P } from "../Common";
@@ -8,8 +16,6 @@ import { StyledSectionWrapper, StyledDivWrapper, H2, P } from "../Common";
 import { theme } from "../../styles/theme";
 
 const ProductsInfo = ({ titles, information }) => {
-  configureAnchors({ offset: -60, scrollDuration: 200 });
-
   return (
     <StyledSectionWrapper padding="0rem 16rem">
       <StyledDivWrapper
@@ -21,9 +27,11 @@ const ProductsInfo = ({ titles, information }) => {
         <StyledDivWrapper>
           <StyledDivWrapper>
             {titles.map((title, i) => (
+              <Link to={`${i}`} spy={true} smooth={true} duration={500}>
                 <H2 as="h3" key={i}>
                   {title}
                 </H2>
+              </Link>
             ))}
           </StyledDivWrapper>
         </StyledDivWrapper>
@@ -31,9 +39,11 @@ const ProductsInfo = ({ titles, information }) => {
           <StyledDivWrapper>
             {information[0].map((e, i) => (
               <StyledDivWrapper key={i}>
+                <Element>
                   <P id={`${i}`} fontSize="2rem">
                     {e}
                   </P>
+                </Element>
               </StyledDivWrapper>
             ))}
           </StyledDivWrapper>
