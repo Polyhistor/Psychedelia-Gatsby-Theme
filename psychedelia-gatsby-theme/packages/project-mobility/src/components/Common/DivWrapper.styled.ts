@@ -18,6 +18,7 @@ export const StyledDivWrapper = styled.div`
   grid-template-columns: ${({ gridTemplateColumns }) =>
     gridTemplateColumns ? `${gridTemplateColumns}` : "inherit"};
   border-top: ${({ borderTop }) => (borderTop ? `${borderTop}` : null)};
+  border-right: ${({ borderRight }) => (borderRight ? `${borderRight}` : null)};
   border: ${({ border, theme }) =>
     border === "bordered" ? `1px solid ${theme.silverChalic}` : border === "thick-bordered" ? `11px solid ${theme.babyPowder}` : null};
   border-radius: ${({ borderRadius }) =>
@@ -30,6 +31,7 @@ export const StyledDivWrapper = styled.div`
   grid-column-gap: ${({ gridColumnGap }) =>
     gridColumnGap ? `${gridColumnGap}` : null};
   z-index: ${({ zIndex }) => (zIndex ? `${zIndex}` : null)};
+  top: ${({ top }) => (top ? `${top}` : null)};
 
   &:hover {
     ${({ hover }) => (hover === "scale" ? scale : null)}

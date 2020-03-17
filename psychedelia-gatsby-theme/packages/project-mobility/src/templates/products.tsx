@@ -17,7 +17,7 @@ const Products = ({ data, pageContext }) => {
         }
       ></BannerProducts>
       <ProductsInfo
-        titles={Object.keys(data.contentfulProducts).slice(2, 8)}
+        titles={["Product Specificiation", "Product Dimension", "Price List", "Gallery"]}
         information={[
          [ data.contentfulProducts.productDescription.productDescription,
           data.contentfulProducts.productSpecification.productSpecification,

@@ -26,4 +26,8 @@ export const GlobalStyles = createGlobalStyle`
     border-radius: 0.4rem;
   }
 
+  .test {
+    color: red;
+  }
+
 `;

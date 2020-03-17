@@ -1,13 +1,6 @@
 import React from "react";
 import Img from "gatsby-image";
-import {
-  Link,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller
-} from "react-scroll";
+import { Link, Element, animateScroll as scroll } from "react-scroll";
 
 // Components
 import { StyledSectionWrapper, StyledDivWrapper, H2, P } from "../Common";
@@ -24,18 +17,24 @@ const ProductsInfo = ({ titles, information }) => {
         padding="8rem"
         borderTop={`11px solid ${theme.palePink}`}
       >
-        <StyledDivWrapper>
-          <StyledDivWrapper>
+        <StyledDivWrapper borderRight="1px solid gray">
+          <StyledDivWrapper position="sticky" top="10rem">
             {titles.map((title, i) => (
-              <Link to={`${i}`} spy={true} smooth={true} duration={500}>
-                <H2 as="h3" key={i}>
+              <Link activeClass="test" to={`${i}`} spy={true} smooth={true} duration={500} offset={70}>
+                <H2
+                  fontSize="3.5em"
+                  borderBottom="1px solid grey"
+                  lineHeight="2.5"
+                  as="h3"
+                  key={i}
+                >
                   {title}
                 </H2>
               </Link>
             ))}
           </StyledDivWrapper>
         </StyledDivWrapper>
-        <StyledDivWrapper>
+        <StyledDivWrapper padding="0 0 0 5rem">
           <StyledDivWrapper>
             {information[0].map((e, i) => (
               <StyledDivWrapper key={i}>
@@ -52,7 +51,6 @@ const ProductsInfo = ({ titles, information }) => {
               <Img key={i} fluid={e.localFile.childImageSharp.fluid} />
             ))}
           </StyledDivWrapper>
-          <H2 as="h4"></H2>
         </StyledDivWrapper>
       </StyledDivWrapper>
     </StyledSectionWrapper>
