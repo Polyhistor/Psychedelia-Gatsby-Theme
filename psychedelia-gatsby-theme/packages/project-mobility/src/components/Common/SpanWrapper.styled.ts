@@ -5,6 +5,8 @@ import styled from "styled-components";
 
 export const StyledSpanWrapper = styled.span`
   display: ${({ display }) => (display ? `${display}` : null)};
+  border-bottom: ${({ borderBottom }) => (borderBottom ? `${borderBottom}` : null)};
+  line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}` : null)};
   color: ${({ color, theme }) =>
     color === "blue" ? `${theme.blueCrayola}` : null};
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
