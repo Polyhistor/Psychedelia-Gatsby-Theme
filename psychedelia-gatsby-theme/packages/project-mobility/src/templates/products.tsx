@@ -22,7 +22,6 @@ const Products = ({ data, pageContext }) => {
          [ data.contentfulProducts.productDescription.productDescription,
           data.contentfulProducts.productSpecification.productSpecification,
           data.contentfulProducts.productDimension.productDimension],
-          data.contentfulProducts.gallery,
           data.contentfulProducts.priceList, 
           data.contentfulProducts.gallery
         ]}
