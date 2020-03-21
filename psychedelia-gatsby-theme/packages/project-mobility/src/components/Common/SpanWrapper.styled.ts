@@ -7,6 +7,7 @@ export const StyledSpanWrapper = styled.span`
   display: ${({ display }) => (display ? `${display}` : null)};
   justify-content: ${({ justifyContent }) =>
     justifyContent ? `${justifyContent}` : null};
+  align-items: ${({ alignItems }) => (alignItems ? `${alignItems}` : null)};
   border-bottom: ${({ borderBottom }) =>
     borderBottom ? `${borderBottom}` : null};
   line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}` : null)};

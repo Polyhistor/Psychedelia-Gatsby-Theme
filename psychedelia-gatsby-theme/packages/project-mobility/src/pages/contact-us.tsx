@@ -4,11 +4,6 @@ import React from "react";
 import BannerProducts from "../components/BannerProducts/BannerProducts";
 import ContactMethods from "../components/AboutUs/ContactMethods";
 import Layout from "../layouts/layout";
-import {
-  StyledSectionWrapper,
-  StyledDivWrapper,
-  H1
-} from "../components/Common";
 
 // Queries
 import useContact from "../queries/useContact";
@@ -24,7 +19,7 @@ const ContactUs = () => {
         subtitle={contactsData.subtitle}
         banner={contactsData.banner.localFile.childImageSharp.fluid}
       ></BannerProducts>
-      <ContactMethods></ContactMethods>
+      <ContactMethods contactsData={contactsData.contactMethods}></ContactMethods>
     </Layout>
   );
 };

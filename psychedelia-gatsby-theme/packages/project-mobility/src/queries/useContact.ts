@@ -16,9 +16,11 @@ const useContact = () => {
           }
         }
         contactMethods {
-          internal {
-            content
-          }
+          title
+          description
+          number
+          email
+          address
         }
       }
     }

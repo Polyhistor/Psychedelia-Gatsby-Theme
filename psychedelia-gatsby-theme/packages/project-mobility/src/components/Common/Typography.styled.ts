@@ -28,6 +28,7 @@ export const H2 = styled.h2`
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
   direction: ${({ direction }) => (direction === "right" ? "ltr" : null)};
+  text-decoration: ${({ textDecoration }) => (textDecoration ? `${textDecoration}` : null)};
 `;
 
 export const P = styled.p`
@@ -35,3 +36,5 @@ export const P = styled.p`
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   direction: ${({ direction }) => (direction === "right" ? "ltr" : null)};
 `;
+
+
