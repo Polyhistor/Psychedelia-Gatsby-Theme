@@ -2,7 +2,14 @@ import React from "react";
 import Img from "gatsby-image";
 
 // Components
-import { StyledSectionWrapper, StyledDivWrapper, H2, P } from "../Common";
+import {
+  StyledSectionWrapper,
+  StyledDivWrapper,
+  StyledSpanWrapper,
+  H2,
+  P
+} from "../Common";
+import { StyledUlList, StyledLiList } from "../Navigation/Navigation.styled";
 
 // Helpers
 import { theme } from "../../styles/theme";
@@ -16,8 +23,7 @@ const ProductsInfo = ({ titles, information }) => {
     productsInfoArray.push({ title, description });
   }
 
-  console.log(titles.push("p", "barak"));
-
+  // TODO - type CHECK THINGS AND MAKE THEM CLEANER, modular, this is just aan easy fix for the object issues
   return (
     <StyledSectionWrapper padding="0rem 16rem">
       <StyledDivWrapper
@@ -28,12 +34,7 @@ const ProductsInfo = ({ titles, information }) => {
           <StyledDivWrapper>
             {productsInfoArray.map((e, i) => (
               <StyledDivWrapper key={i}>
-                <H2
-                  as="h3"
-                  fontSize="3.5em"
-                  borderBottom="1px solid grey"
-                  lineHeight="2.5"
-                >
+                <H2 as="h3" fontSize="7em" lineHeight="1.5">
                   {e.title}
                 </H2>
                 <P fontSize="2rem">{e.description}</P>
@@ -41,17 +42,62 @@ const ProductsInfo = ({ titles, information }) => {
             ))}
           </StyledDivWrapper>
           <StyledDivWrapper>
-            <H2
-              as="h3"
-              fontSize="3.5em"
-              borderBottom="1px solid grey"
-              lineHeight="2.5"
-            >
-              Product Gallery
+            <H2 as="h3" fontSize="7em" lineHeight="2.5">
+              Product Specificaton
+            </H2>
+            <StyledUlList display="flex" direction="column">
+              {information[1].map((e, i) => (
+                <StyledLiList key={i} listStyle="inside">
+                  {e}
+                </StyledLiList>
+              ))}
+            </StyledUlList>
+          </StyledDivWrapper>
+          <StyledDivWrapper>
+            <H2 as="h3" fontSize="7em" lineHeight="2.5">
+              Price List
             </H2>
             {information[2].map((e, i) => (
-              <Img key={i} fluid={e.localFile.childImageSharp.fluid} />
+              <StyledDivWrapper
+                width="25%"
+                display="grid"
+                gridTemplateColumns="33% 20% 33%"
+              >
+                <StyledSpanWrapper fontSize="3em" lineHeight="2.5">
+                  {e.label}
+                </StyledSpanWrapper>
+                <StyledSpanWrapper
+                  fontSize="3em"
+                  lineHeight="2.5"
+                  display="flex"
+                  justifyContent="flex-start"
+                >
+                  &#8594;
+                </StyledSpanWrapper>
+                <StyledSpanWrapper fontSize="3em" lineHeight="2.5">
+                  {e.price}
+                </StyledSpanWrapper>
+              </StyledDivWrapper>
             ))}
+          </StyledDivWrapper>
+          <StyledDivWrapper>
+            <H2 as="h3" fontSize="7em" lineHeight="2.5">
+              Product Gallery
+            </H2>
+            <StyledDivWrapper
+              display="grid"
+              gridGap="10px"
+              gridTemplateColumns="33% 33% 33%"
+              margin="0 0 8rem 0"
+            >
+              {information[3].map((e, i) => (
+                <Img
+                  style={{ border: "1px solid #ECDBDF" }}
+                  key={i}
+                  fluid={e.localFile.childImageSharp.fluid}
+                />
+              ))}
+            </StyledDivWrapper>
           </StyledDivWrapper>
         </StyledDivWrapper>
       </StyledDivWrapper>

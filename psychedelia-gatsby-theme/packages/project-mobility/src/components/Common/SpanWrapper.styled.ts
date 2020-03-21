@@ -5,7 +5,10 @@ import styled from "styled-components";
 
 export const StyledSpanWrapper = styled.span`
   display: ${({ display }) => (display ? `${display}` : null)};
-  border-bottom: ${({ borderBottom }) => (borderBottom ? `${borderBottom}` : null)};
+  justify-content: ${({ justifyContent }) =>
+    justifyContent ? `${justifyContent}` : null};
+  border-bottom: ${({ borderBottom }) =>
+    borderBottom ? `${borderBottom}` : null};
   line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}` : null)};
   color: ${({ color, theme }) =>
     color === "blue" ? `${theme.blueCrayola}` : null};
@@ -13,5 +16,5 @@ export const StyledSpanWrapper = styled.span`
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   transform: ${({ transform }) => (transform ? `${transform}` : null)};
-  ${ ({hover}) => hover ? `&:hover { ${hover} }` : null }
+  ${({ hover }) => (hover ? `&:hover { ${hover} }` : null)}
 `;

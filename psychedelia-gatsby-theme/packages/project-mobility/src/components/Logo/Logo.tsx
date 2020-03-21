@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 // Component
 import { StyledImage } from "../Common/Image.styled";
@@ -11,14 +12,14 @@ const Logo = () => {
   const websiteConfigData = useSiteConfigQuery();
 
   return (
-    <span>
+    <Link to="/">
       <StyledImage
         url={websiteConfigData[0].node.logo.file.url}
         alt="Mobility Aid Logo"
         width="22rem"
         height="auto"
       ></StyledImage>
-    </span>
+    </Link>
   );
 };
 

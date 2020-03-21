@@ -20,7 +20,11 @@ export const StyledDivWrapper = styled.div`
   border-top: ${({ borderTop }) => (borderTop ? `${borderTop}` : null)};
   border-right: ${({ borderRight }) => (borderRight ? `${borderRight}` : null)};
   border: ${({ border, theme }) =>
-    border === "bordered" ? `1px solid ${theme.silverChalic}` : border === "thick-bordered" ? `11px solid ${theme.babyPowder}` : null};
+    border === "bordered"
+      ? `1px solid ${theme.silverChalic}`
+      : border === "thick-bordered"
+      ? `11px solid ${theme.babyPowder}`
+      : null};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
   max-height: ${({ maxHeight }) => (maxHeight ? `${maxHeight}` : null)};
@@ -32,6 +36,7 @@ export const StyledDivWrapper = styled.div`
     gridColumnGap ? `${gridColumnGap}` : null};
   z-index: ${({ zIndex }) => (zIndex ? `${zIndex}` : null)};
   top: ${({ top }) => (top ? `${top}` : null)};
+  grid-gap: ${({ gridGap }) => (gridGap ? `${gridGap}` : null)};
 
   &:hover {
     ${({ hover }) => (hover === "scale" ? scale : null)}

@@ -34,9 +34,10 @@ export const StyledLiList = styled.li`
   display: ${({ display }) => (display ? `${display}` : null)};
   align-items: ${({ alignItems }) => (alignItems ? `${alignItems}` : null)};
   padding: ${({ padding }) => padding};
-  list-style: none;
+  list-style: ${({ listStyle }) => (listStyle ? `${listStyle}` : "none")};
   font-size: 2rem;
-  text-transform: ${({ textTransform }) => (textTransform ? `${textTransform}` : null)};
+  text-transform: ${({ textTransform }) =>
+    textTransform ? `${textTransform}` : null};
 
   &:not(:last-child) {
     margin-bottom: ${({ marginBottom }) =>
