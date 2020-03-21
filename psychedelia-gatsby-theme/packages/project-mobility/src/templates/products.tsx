@@ -11,6 +11,7 @@ const Products = ({ data, pageContext }) => {
     <Layout>
       <BannerProducts
         title={data.contentfulProducts.productTitle}
+        subtitle={data.contentfulProducts.productSubtitle}
         banner={
           data.contentfulProducts.productBannerImage.localFile.childImageSharp
             .fluid

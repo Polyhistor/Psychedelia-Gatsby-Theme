@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 export const ProductsFragment = graphql`
   fragment Products on ContentfulProducts {
     productTitle
+    productSubtitle
     productBannerImage {
       localFile {
         childImageSharp {

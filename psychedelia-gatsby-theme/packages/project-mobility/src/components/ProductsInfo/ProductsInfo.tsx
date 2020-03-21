@@ -59,6 +59,7 @@ const ProductsInfo = ({ titles, information }) => {
             </H2>
             {information[2].map((e, i) => (
               <StyledDivWrapper
+                key={i}
                 width="25%"
                 display="grid"
                 gridTemplateColumns="33% 20% 33%"
