@@ -35,3 +35,23 @@ export const ProductsFragment = graphql`
     }
   }
 `;
+
+export const GenericFragment = graphql`
+  fragment Generic on ContentfulGeneric {
+    slug
+    title
+    subtitle
+    banner {
+      localFile {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    description {
+      json
+    }
+  }
+`;
