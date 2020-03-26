@@ -16,7 +16,7 @@ const Generic = ({ data, pageContext }) => {
         banner={data.contentfulGeneric.banner.localFile.childImageSharp.fluid}
       ></BannerProducts>
       <GenericBody
-        bodyData={data.contentfulGeneric.description.json}
+        bodyData={data.contentfulGeneric.description}
       ></GenericBody>
     </Layout>
   );

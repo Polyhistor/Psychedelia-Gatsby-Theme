@@ -1,30 +1,27 @@
-import React, { Children } from "react";
-import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
+import React from "react";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 // Components
-import {
-  StyledSectionWrapper,
-  StyledDivWrapper,
-  StyledSpanWrapper,
-  H2,
-  P
-} from "../Common";
+import { StyledSectionWrapper, StyledDivWrapper, H2, P } from "../Common";
+
+// Helpers
+import {theme} from "../../styles/theme"
 
 const GenericBody = ({ bodyData }) => {
-  console.log(bodyData);
+ 
   const options = {
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => {
-        <P fontSize="1.6rem">{children}</P>;
-      },
-      [BLOCKS.HEADING_2]: (node, Children) => {
-        <H2 fontSize="2rem">{Children}</H2>;
-      },
+      [BLOCKS.PARAGRAPH]: (node, children) => (
+        <P fontSize="1.6rem">{children}</P>
+      ),
+      [BLOCKS.HEADING_2]: (node, Children) => (
+        <H2 fontSize="2rem" color="blue">{Children}</H2>
+      ),
       [INLINES.HYPERLINK]: (node, children) => {
         const URL = node.data.uri;
         return (
-          <H2 as="a" href={URL} target="_blank">
+          <H2 as="a" href={URL} color="blue"  textDecoration="none" target="_blank">
             {children}
           </H2>
         );
@@ -35,7 +32,7 @@ const GenericBody = ({ bodyData }) => {
   return (
     <StyledSectionWrapper>
       <StyledDivWrapper as="article">
-        {documentToReactComponents(bodyData, options)}
+        {documentToReactComponents(bodyData.json, options)}
       </StyledDivWrapper>
     </StyledSectionWrapper>
   );
