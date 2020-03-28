@@ -5,6 +5,7 @@ import styled from "styled-components";
 
 export const StyledSpanWrapper = styled.span`
   display: ${({ display }) => (display ? `${display}` : null)};
+  font-weight: ${({ fontWeight }) => (fontWeight ? `${fontWeight}` : null)};
   justify-content: ${({ justifyContent }) =>
     justifyContent ? `${justifyContent}` : null};
   align-items: ${({ alignItems }) => (alignItems ? `${alignItems}` : null)};
@@ -17,5 +18,6 @@ export const StyledSpanWrapper = styled.span`
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   transform: ${({ transform }) => (transform ? `${transform}` : null)};
+  text-transform: ${({ textTransform }) => (textTransform ? `${textTransform}` : null)};
   ${({ hover }) => (hover ? `&:hover { ${hover} }` : null)}
 `;

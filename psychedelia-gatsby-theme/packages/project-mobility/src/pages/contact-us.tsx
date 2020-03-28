@@ -10,7 +10,7 @@ import useContact from "../queries/useContact";
 
 const ContactUs = () => {
   const contactsData = useContact();
-  console.log(contactsData);
+  
 
   return (
     <Layout>

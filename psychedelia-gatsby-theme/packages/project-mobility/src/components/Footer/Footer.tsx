@@ -20,7 +20,7 @@ const Footer = () => {
   const footerData = useSiteConfigQuery()[0].node.footerLabels;
 
   return (
-    <StyledSectionWrapper padding="0 24rem">
+    <StyledSectionWrapper padding="0 9em">
       <StyledDivWrapper
         padding="5rem 0"
         display="grid"

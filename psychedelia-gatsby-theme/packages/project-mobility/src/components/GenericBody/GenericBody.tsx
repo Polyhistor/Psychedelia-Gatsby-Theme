@@ -30,7 +30,7 @@ const GenericBody = ({ bodyData }) => {
   };
 
   return (
-    <StyledSectionWrapper>
+    <StyledSectionWrapper padding="0 10rem">
       <StyledDivWrapper as="article">
         {documentToReactComponents(bodyData.json, options)}
       </StyledDivWrapper>

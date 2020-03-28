@@ -60,22 +60,39 @@ const ProductsInfo = ({ titles, information }) => {
             {information[2].map((e, i) => (
               <StyledDivWrapper
                 key={i}
-                width="25%"
+                width="50%"
                 display="grid"
                 gridTemplateColumns="33% 20% 33%"
               >
-                <StyledSpanWrapper fontSize="3em" lineHeight="2.5">
+                <StyledSpanWrapper
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                  textTransform="capitalize"
+                  fontSize="4.5em"
+                  lineHeight="2.5"
+               
+                >
                   {e.label}
                 </StyledSpanWrapper>
                 <StyledSpanWrapper
-                  fontSize="3em"
+                  fontSize="6em"
+                  fontWeight="600"
                   lineHeight="2.5"
                   display="flex"
-                  justifyContent="flex-start"
+                  justifyContent="center"
+                  color="blue"
                 >
                   &#8594;
                 </StyledSpanWrapper>
-                <StyledSpanWrapper fontSize="3em" lineHeight="2.5">
+                <StyledSpanWrapper
+                  fontSize="6em"
+                  fontWeight="600"
+                  lineHeight="2.5"
+                  display="flex"
+                  justifyContent="center"
+                  color="blue"
+                >
                   {e.price}
                 </StyledSpanWrapper>
               </StyledDivWrapper>
