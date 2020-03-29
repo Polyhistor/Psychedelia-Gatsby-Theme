@@ -1,5 +1,5 @@
 module.exports = themeOptions => {
-  console.log(themeOptions)
+  console.log(themeOptions);
   return {
     plugins: [
       `gatsby-plugin-remove-trailing-slashes`,
@@ -18,7 +18,7 @@ module.exports = themeOptions => {
         options: {
           spaceId: themeOptions.contentful.spaceId,
           accessToken: themeOptions.contentful.accessToken,
-          downloadLocal: themeOptions.contentful.downloadLocal, 
+          downloadLocal: themeOptions.contentful.downloadLocal
         }
       },
       {
@@ -27,6 +27,18 @@ module.exports = themeOptions => {
           includePaths: themeOptions.pageProgress.includePaths,
           height: themeOptions.pageProgress.includePaths,
           color: themeOptions.pageProgress.color
+        }
+      },
+      {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+          name: themeOptions.manifest.name,
+          short_name: themeOptions.manifest.shortName,
+          start_url: `/`,
+          background_color: themeOptions.manifest.backgroundColor,
+          theme_color: themeOptions.manifest.themeColor,
+          icon: themeOptions.manifest.icon,
+          display: `standalone`
         }
       }
     ]

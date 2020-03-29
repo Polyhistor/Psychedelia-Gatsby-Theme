@@ -13,11 +13,14 @@ export const StyledSpanWrapper = styled.span`
     borderBottom ? `${borderBottom}` : null};
   line-height: ${({ lineHeight }) => (lineHeight ? `${lineHeight}` : null)};
   color: ${({ color, theme }) =>
-    color === "blue" ? `${theme.blueCrayola}` : null};
+    color === "blue" ? `${theme.blueCrayola}` : color};
   font-size: ${({ fontSize }) => (fontSize ? `${fontSize}` : null)};
   margin: ${({ margin }) => (margin ? `${margin}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
   transform: ${({ transform }) => (transform ? `${transform}` : null)};
   text-transform: ${({ textTransform }) => (textTransform ? `${textTransform}` : null)};
+  text-decoration: ${({ textDecoration }) => (textDecoration ? `${textDecoration}` : null)};
+  text-align: ${({ textAlign }) => (textAlign ? `${textAlign}` : null)};
+  cursor: ${({ cursor }) => (cursor ? `${cursor}` : null)};
   ${({ hover }) => (hover ? `&:hover { ${hover} }` : null)}
 `;

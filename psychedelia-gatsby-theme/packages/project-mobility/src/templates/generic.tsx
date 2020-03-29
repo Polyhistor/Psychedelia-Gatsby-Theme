@@ -7,7 +7,6 @@ import BannerProducts from "../components/BannerProducts/BannerProducts";
 import GenericBody from "../components/GenericBody/GenericBody";
 
 const Generic = ({ data, pageContext }) => {
-  console.log(data);
   return (
     <Layout>
       <BannerProducts
@@ -15,9 +14,7 @@ const Generic = ({ data, pageContext }) => {
         subtitle={data.contentfulGeneric.subtitle}
         banner={data.contentfulGeneric.banner.localFile.childImageSharp.fluid}
       ></BannerProducts>
-      <GenericBody
-        bodyData={data.contentfulGeneric.description}
-      ></GenericBody>
+      <GenericBody bodyData={data.contentfulGeneric.description}></GenericBody>
     </Layout>
   );
 };

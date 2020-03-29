@@ -9,7 +9,7 @@ export const StyledToolTip = styled(StyledDivWrapper)`
     border-width: 0.6rem;
     border-style: solid;
     border-color: transparent transparent black transparent;
-    top: -1.2rem;
+    top: -1.3rem;
     left: 10%;
   }
 `;

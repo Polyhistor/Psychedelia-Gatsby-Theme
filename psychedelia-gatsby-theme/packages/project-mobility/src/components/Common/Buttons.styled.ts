@@ -12,4 +12,5 @@ export const StyledButtonPrimary = styled.button`
   border-radius: 0.4rem;
   font-size: 1.6rem;
   font-weight: 600;
+  cursor: pointer;
 `;

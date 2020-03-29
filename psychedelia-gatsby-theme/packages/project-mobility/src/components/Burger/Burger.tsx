@@ -3,7 +3,6 @@ import { StyledBurger } from "./Burger.styled";
 import { OpenerProps } from "../../interfaces/navigation";
 
 const Burger = ({ open, setOpen }: OpenerProps): JSX.Element => {
-  // console.log(setOpen);
   return (
     <StyledBurger open={open} onClick={() => setOpen(!open)}>
       <div></div>

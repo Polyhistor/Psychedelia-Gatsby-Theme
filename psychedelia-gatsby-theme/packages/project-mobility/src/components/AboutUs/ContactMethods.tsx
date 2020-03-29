@@ -13,7 +13,6 @@ import {
 import { theme } from "../../styles/theme";
 
 const ContactMethods = ({ contactsData }) => {
-  console.log(contactsData);
   return (
     <StyledSectionWrapper padding="0 10rem">
       <StyledDivWrapper borderTop={`11px solid ${theme.palePink}`}>

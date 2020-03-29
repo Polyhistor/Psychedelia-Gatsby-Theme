@@ -17,6 +17,13 @@ module.exports = {
           includePaths: ["/"], 
           height: 3,
           color: `#337AFF`
+        }, 
+        manifest: {
+          name: "Mobility Aids New Zealand",
+          shortName: "Mobility Aids",
+          backgroundColor: "white",
+          themeColor: "#337AFF",
+          icon: "src/images/mobility_aids_favicon.svg"
         }
       }
     }

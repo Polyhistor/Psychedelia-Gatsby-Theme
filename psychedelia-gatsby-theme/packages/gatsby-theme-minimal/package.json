@@ -5,6 +5,6 @@
   "author": "Pouya Ataei",
   "license": "MIT",
   "peerDependencies": {
-    "gatsby": "^2.19.17"
+    "gatsby": "^2.20.8"
   }
 }

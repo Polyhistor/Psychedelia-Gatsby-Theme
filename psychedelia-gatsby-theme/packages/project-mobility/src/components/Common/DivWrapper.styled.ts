@@ -24,7 +24,7 @@ export const StyledDivWrapper = styled.div`
       ? `1px solid ${theme.silverChalic}`
       : border === "thick-bordered"
       ? `11px solid ${theme.babyPowder}`
-      : null};
+      : border};
   border-radius: ${({ borderRadius }) =>
     borderRadius ? `${borderRadius}` : null};
   max-height: ${({ maxHeight }) => (maxHeight ? `${maxHeight}` : null)};
