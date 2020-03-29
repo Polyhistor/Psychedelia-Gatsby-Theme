@@ -62,14 +62,14 @@ const ProductsInfo = ({ titles, information }) => {
                 key={i}
                 width="50%"
                 display="grid"
-                gridTemplateColumns="33% 20% 33%"
+                gridTemplateColumns="23% 20% 33%"
               >
                 <StyledSpanWrapper
                   display="flex"
-                  justifyContent="center"
+                  justifyContent="start"
                   alignItems="center"
                   textTransform="capitalize"
-                  fontSize="4.5em"
+                  fontSize="3.5em"
                   lineHeight="2.5"
                
                 >
@@ -86,11 +86,12 @@ const ProductsInfo = ({ titles, information }) => {
                   &#8594;
                 </StyledSpanWrapper>
                 <StyledSpanWrapper
-                  fontSize="6em"
+                  fontSize="4em"
                   fontWeight="600"
                   lineHeight="2.5"
                   display="flex"
                   justifyContent="center"
+                  alignItems="center"
                   color="blue"
                 >
                   {e.price}
