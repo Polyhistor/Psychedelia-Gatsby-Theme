@@ -29,6 +29,7 @@ export const H2 = styled.h2`
     borderRadius ? `${borderRadius}` : null};
   direction: ${({ direction }) => (direction === "right" ? "ltr" : null)};
   text-decoration: ${({ textDecoration }) => (textDecoration ? `${textDecoration}` : null)};
+  text-align: ${({ textAlign }) => (textAlign ? `${textAlign}` : null)};
 `;
 
 export const P = styled.p`

@@ -29,11 +29,11 @@ const Footer = () => {
       >
         {footerData.map((e, i) => (
           <StyledDivWrapper key={i}>
-            <H2 as="h5" fontSize="5em" textTransform="capitalize">
+            <H2 as="h5" fontSize="5em" textTransform="capitalize" margin="0 0 3rem 0" textAlign="center">
               {e.label}
             </H2>
             {e.subs ? (
-              <StyledUlList display="flex" direction="column">
+              <StyledUlList display="flex" direction="column" textAlign="center">
                 {e.subs.map((s, i) => (
                   <StyledLiList key={i}>
                     <Link to={s.link}>

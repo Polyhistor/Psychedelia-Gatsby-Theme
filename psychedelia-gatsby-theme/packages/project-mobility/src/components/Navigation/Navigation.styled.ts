@@ -24,6 +24,7 @@ export const StyledUlList = styled.ul`
   padding-left: 0;
   align-items: ${({ align }) => `${align}`};
   font-weight: ${({ fontWeight }) => `${fontWeight}`};
+  text-align:   ${({ textAlign }) => (textAlign ? `${textAlign}` : null)};
 
   ${media.lessThan("medium")`
    ${({ mobile }) => (mobile ? "display:none" : null)}
