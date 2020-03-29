@@ -40,7 +40,13 @@ module.exports = themeOptions => {
           icon: themeOptions.manifest.icon,
           display: `standalone`
         }
-      }
+      },
+      {
+        resolve: `gatsby-plugin-tawk`,
+        options: {
+          tawkId: themeOptions.tawk.tawkId,
+        },
+      },
     ]
   };
 };
