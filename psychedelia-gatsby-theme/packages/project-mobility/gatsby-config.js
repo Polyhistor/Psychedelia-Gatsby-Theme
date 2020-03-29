@@ -7,6 +7,10 @@ module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-minimal`,
+      resolve: `gatsby-plugin-tawk`,
+      options: {
+        tawkId: "5e803d3435bcbb0c9aab7e21",
+      },
       options: {
         contentful: {
           spaceId: process.env.CONTENTFUL_SPACE_ID,
