@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { fadeInInterpolated, scale } from "../../styles/animations";
+import {  scale } from "../../styles/animations";
 
 export const StyledDivWrapper = styled.div`
-  ${({ animation }) => (animation === "fadeIn" ? fadeInInterpolated : null)};
   position: ${({ position }) => (position ? `${position}` : null)};
   background: ${({ background }) => (background ? `${background}` : null)};
   padding: ${({ padding }) => (padding ? `${padding}` : null)};
